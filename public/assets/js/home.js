@@ -9,12 +9,14 @@ var x = setInterval(
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('days').innerHTML = days;
-        document.getElementById('hours').innerHTML = hours;
-        document.getElementById('minutes').innerHTML = minutes;
-        document.getElementById('seconds').innerHTML = seconds;
+        let day = document.getElementById('days').innerHTML = days;
+        let hour = document.getElementById('hours').innerHTML = hours;
+        let minute = document.getElementById('minutes').innerHTML = minutes;
+        let seccond = document.getElementById('seconds').innerHTML = seconds;
 
-
+        // if(day == "00"){
+        //     console.log('dibuka')
+        // }
     }, 1000
 
 
