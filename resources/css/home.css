@@ -1,0 +1,139 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.container {
+    width: 96%;
+    height: 100vh;
+    background: rgb(10, 38, 71);
+    background: linear-gradient(180deg, rgba(10, 38, 71, 1) 0%, rgba(18, 78, 140, 0.9) 100%);
+    padding: 30px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 50vw;
+    
+}
+
+.logo{
+    gap: 10px;
+    width: 20vw;
+    height: 8vh;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: #0A2647;
+}
+.logo p{
+    font-size: 17px;
+}
+.logo p span{
+    color: #FF9900;
+}
+.header img{
+    width: 50px;
+}
+ul{
+    display: flex;
+    gap: 40px;
+}
+ul li{
+    list-style: none;
+    display: flex;
+}
+.sosmed a{
+    color: white;
+    opacity: 0.8;
+    font-size: 40px
+}
+.content{
+      padding: 0px 30px 30px 30px;
+      display: flex;
+      gap: 2vw;
+}
+.content .left{
+    width: 60%;
+    line-height: 5px;
+}
+.content .left .top p:first-child{
+    font-size: 100px;
+    color: white;
+    font-weight: 900;
+
+}
+.content .left .top p:last-child{
+    font-size: 76px;
+    color: white;
+    font-weight: 900;
+    word-spacing: 10px;
+
+}
+.content .left .top p:last-child span{
+    color: #FF9900;
+}
+
+.back1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background-color: #1441726d;
+
+}
+
+.back2{
+     width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: #124f8c94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back2 img{
+    width: 40vw;
+}
+
+.time {
+    display: flex;
+    gap: 20px;
+}
+
+.hari, .jam, .menit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+    background-color: #0A2647;
+    border-radius: 20px;
+}
+
+.time p:last-child{
+    font-size: 76px;
+    color: white;
+    font-weight: 900;
+    word-spacing: 10px;
+}
+.time p:first-child{
+    font-size: 20px;
+    color: white;
+    font-weight:700;
+    word-spacing: 10px;
+}
