@@ -178,15 +178,15 @@ ul li{
 
 .search{
     padding: 12px 20px;
-    width: 500px;
+    width: 35vw;
     border-radius: 15px;
     font-size: 18px;
 }
 
 
 .search-wrapper input{
+    margin-right: -15px;
     border: 0.5px solid rgba(0, 0, 0, 0.418);
-    margin-right: 5px;
     font-weight: 700;
 }
 .search-wrapper button{
@@ -196,7 +196,6 @@ ul li{
     font-size: 18px;
     background-color: #FF9900;
     font-weight: 800;
-    color: white;
-    
+    color: white; 
     border: transparent;
 }

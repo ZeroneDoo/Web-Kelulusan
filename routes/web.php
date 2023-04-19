@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Facades\Excel;
 
 Route::get('/', function () {
-    return view('home');
+    return view('result');
 });
 
 Route::post('/', function(Request $request){
