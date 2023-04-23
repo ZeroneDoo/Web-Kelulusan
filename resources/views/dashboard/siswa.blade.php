@@ -15,45 +15,53 @@
           
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">
-              <table class="table align-items-center mb-0">
+              <table class="table align-items-center justify-center mb-0">
                 <thead>
-                  <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Function</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Employed</th>
+                  <tr class="">
+                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NISN</th>
+                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NIPD</th>
+                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama</th>
+                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Tempat Lahir</th>
+                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Tanggal Lahir</th>
+
+                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Kompetensi</th>
+
                     <th class="text-secondary opacity-7"></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">John Michael</h6>
-                          <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <p class="text-xs font-weight-bold mb-0">Manager</p>
-                      <p class="text-xs text-secondary mb-0">Organization</p>
-                    </td>
-                    <td class="align-middle text-center text-sm">
-                      <span class="badge badge-sm bg-gradient-success">Online</span>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                    </td>
-                    <td class="align-middle">
-                      <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                <tr class="">
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm ">0612345</h6>
+                  </td>
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm">0867674517</h6>
+                  </td>
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm">Sheyla Aulya</h6>
+                  </td>
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm">Jakarta</h6>
+                  </td>
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm">24 - 03 - 2006</h6>
+                  </td>
+                  <td>
+                    <h6 class="p-3 mb-0 text-sm">PPLG</h6>
+                  </td>
+                 
+                  <td class="align-middle">
+                    <div class="d-flex justify-content-center p-3 gap-3">
+                      <a href="javascript:;" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
                         Edit
                       </a>
-                    </td>
-                  </tr>
+                      <a href="javascript:;" class="text-danger font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
+                        Hapus
+                      </a>
+                    </div>
+                    
+                  </td>
+                </tr>
                
              
                 </tbody>

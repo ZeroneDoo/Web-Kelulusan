@@ -31,6 +31,12 @@ Route::get('/signup', function () {
     return view('dashboard/signup');
 });
 
+Route::get('/inputnilai', function () {
+    return view('dashboard/inputNilai');
+});
+
+
+
 
 
 

@@ -17,45 +17,38 @@
             <div class="table-responsive p-0">
               <table class="table align-items-center mb-0">
                 <thead>
-                  <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Function</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Employed</th>
-                    <th class="text-secondary opacity-7"></th>
+                  <tr class="">
+                    <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Pelajaran</th>
+                    <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">KKM</th>
+                    <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jurusan</th>
+                    <th class=" text-secondary opacity-7"></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="">
                     <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">John Michael</h6>
-                          <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
-                        </div>
-                      </div>
+                      <h6 class="p-3 mb-0 text-sm ">Matematika</h6>
                     </td>
                     <td>
-                      <p class="text-xs font-weight-bold mb-0">Manager</p>
-                      <p class="text-xs text-secondary mb-0">Organization</p>
+                      <h6 class="p-3 mb-0 text-sm">90</h6>
                     </td>
-                    <td class="align-middle text-center text-sm">
-                      <span class="badge badge-sm bg-gradient-success">Online</span>
+                    <td>
+                      <h6 class="p-3 mb-0 text-sm">---</h6>
                     </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                    </td>
+                    
+                   
                     <td class="align-middle">
-                      <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                        Edit
-                      </a>
+                      <div class="d-flex justify-content-center p-3 gap-3">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                        <a href="javascript:;" class="text-danger font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
+                          Hapus
+                        </a>
+                      </div>
+                      
                     </td>
                   </tr>
-               
-             
                 </tbody>
               </table>
             </div>
