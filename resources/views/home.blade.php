@@ -27,7 +27,8 @@
     </div>
 </div>
 <div class="content">
-    <div class="left">
+    
+    <div id="left-count", class="left">
         <div class="top">
             <p>PENGUMUMAN</p>
             <P><span>KELULUSAN</span> DALAM</P>
@@ -50,6 +51,23 @@
                     <p>Detik</p>
                     <p id="seconds">00</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="left" class="leftafter">
+        <div class="top">
+            <p>LIHAT DATA</p>
+            <P><span>KELULUSAN</span> DISINI</P>
+        </div>
+        <div class="bottom">
+            <p>Masukkan NISN untuk melihat data kelulusan mu !</p>
+            <div class="search-wrapper">
+                <form action="">
+                    <input type="search" class="search" id="search" placeholder="Nomor Induk Siswa Nasional...">
+                    <button type="submit">Cari</button>
+                </form>
+                
             </div>
         </div>
     </div>

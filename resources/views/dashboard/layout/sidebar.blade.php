@@ -1,0 +1,93 @@
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+    id="sidenav-main">
+    <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+            aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href="#"
+            target="_blank">
+            <span class="ms-1 font-weight-bold">Dashboard</span>
+        </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+           
+            
+            <li class="nav-item mt-3">
+              <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Halaman Data</h6>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link {{ Request::is('siswa') ? 'active' : '' }}" href="{{ url('siswa') }}">
+                  <div
+                      class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20">
+                          @if (Request::is('siswa'))
+                          <path fill="white" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4l.11-.94L5 5.5L12 2l7 3.5v5h-1V6l-2.11 1.06L16 8m-4 6c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/><
+                          @else
+                          <path fill="currentColor" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4l.11-.94L5 5.5L12 2l7 3.5v5h-1V6l-2.11 1.06L16 8m-4 6c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/>
+                          @endif
+                      </svg>
+                  </div>
+                  <span class="nav-link-text ms-1">Siswa</span>
+              </a>
+          </li>
+             
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('kelas') ? 'active' : '' }}" href="{{ url('kelas') }}">
+              <div
+                  class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 18 18">
+                      @if (Request::is('kelas'))
+                      <g fill="white" fill-rule="evenodd" clip-rule="evenodd"><path d="M3.36 4.984h1.574v2.885h3.673v1.574H4.934v3.672h3.673v1.573h-4.46a.787.787 0 0 1-.786-.786V4.984Z"/><path d="M1 1.836C1 .822 1.822 0 2.836 0h7.869c1.014 0 1.836.822 1.836 1.836v1.836a1.836 1.836 0 0 1-1.836 1.836H2.836A1.836 1.836 0 0 1 1 3.672V1.836Zm1.836-.262a.262.262 0 0 0-.262.262v1.836c0 .145.117.262.262.262h7.869a.262.262 0 0 0 .262-.262V1.836a.262.262 0 0 0-.262-.262H2.836ZM7.82 8.393c0-1.014.822-1.836 1.836-1.836h2.623c1.014 0 1.836.822 1.836 1.836v.525a1.836 1.836 0 0 1-1.836 1.836H9.656A1.836 1.836 0 0 1 7.82 8.918v-.525Zm1.836-.262a.262.262 0 0 0-.263.262v.525c0 .145.118.262.263.262h2.623a.262.262 0 0 0 .262-.262v-.525a.262.262 0 0 0-.262-.262H9.656ZM7.82 13.64c0-1.015.822-1.837 1.836-1.837h2.623c1.014 0 1.836.822 1.836 1.836v.525A1.836 1.836 0 0 1 12.279 16H9.656a1.836 1.836 0 0 1-1.836-1.836v-.525Zm1.836-.263a.262.262 0 0 0-.263.262v.525c0 .145.118.262.263.262h2.623a.262.262 0 0 0 .262-.262v-.525a.262.262 0 0 0-.262-.262H9.656Z"/></g>
+                      @else
+                      <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M3.36 4.984h1.574v2.885h3.673v1.574H4.934v3.672h3.673v1.573h-4.46a.787.787 0 0 1-.786-.786V4.984Z"/><path d="M1 1.836C1 .822 1.822 0 2.836 0h7.869c1.014 0 1.836.822 1.836 1.836v1.836a1.836 1.836 0 0 1-1.836 1.836H2.836A1.836 1.836 0 0 1 1 3.672V1.836Zm1.836-.262a.262.262 0 0 0-.262.262v1.836c0 .145.117.262.262.262h7.869a.262.262 0 0 0 .262-.262V1.836a.262.262 0 0 0-.262-.262H2.836ZM7.82 8.393c0-1.014.822-1.836 1.836-1.836h2.623c1.014 0 1.836.822 1.836 1.836v.525a1.836 1.836 0 0 1-1.836 1.836H9.656A1.836 1.836 0 0 1 7.82 8.918v-.525Zm1.836-.262a.262.262 0 0 0-.263.262v.525c0 .145.118.262.263.262h2.623a.262.262 0 0 0 .262-.262v-.525a.262.262 0 0 0-.262-.262H9.656ZM7.82 13.64c0-1.015.822-1.837 1.836-1.837h2.623c1.014 0 1.836.822 1.836 1.836v.525A1.836 1.836 0 0 1 12.279 16H9.656a1.836 1.836 0 0 1-1.836-1.836v-.525Zm1.836-.263a.262.262 0 0 0-.263.262v.525c0 .145.118.262.263.262h2.623a.262.262 0 0 0 .262-.262v-.525a.262.262 0 0 0-.262-.262H9.656Z"/></g>
+                      @endif
+                  </svg>
+              </div>
+              <span class="nav-link-text ms-1">Kelas</span>
+          </a>
+      </li>
+          <li class="nav-item">
+            <a class="nav-link {{ Request::is('wakel') ? 'active' : '' }}" href="{{ url('wakel') }}">
+                <div
+                    class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22">
+                        @if (Request::is('wakel'))
+                        <path fill="white" d="M7 11a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9Zm10.5 4a4 4 0 1 1 0-8a4 4 0 0 1 0 8Zm0 1a4.5 4.5 0 0 1 4.5 4.5v.5h-9v-.5a4.5 4.5 0 0 1 4.5-4.5ZM7 12a5 5 0 0 1 5 5v4H2v-4a5 5 0 0 1 5-5Z"/>
+                        @else
+                        <path fill="currentColor" d="M7 11a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9Zm10.5 4a4 4 0 1 1 0-8a4 4 0 0 1 0 8Zm0 1a4.5 4.5 0 0 1 4.5 4.5v.5h-9v-.5a4.5 4.5 0 0 1 4.5-4.5ZM7 12a5 5 0 0 1 5 5v4H2v-4a5 5 0 0 1 5-5Z"/>
+                        @endif
+                    </svg>
+                </div>
+                <span class="nav-link-text ms-1">Wali Kelas</span>
+            </a>
+        </li>
+            
+      
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Halaman Nilai</h6>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('inputnilai') ? 'active' : '' }}" href="{{ url('inputnilai') }}">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20">
+                            @if (Request::is('inputnilai'))
+                            <path fill="white"
+                                d="M19 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10m0 2h-3v6l-2.5-2.25L11 10V4H9v12h10M3 20a2 2 0 0 0 2 2h12v-2H5V6H3Z" />
+                            @else
+                            <path fill="currentColor"
+                                d="M19 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10m0 2h-3v6l-2.5-2.25L11 10V4H9v12h10M3 20a2 2 0 0 0 2 2h12v-2H5V6H3Z" />
+                            @endif
+                        </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Input Nilai</span>
+                </a>
+            </li>
+          
+
+        </ul>
+    </div>
+
+</aside>

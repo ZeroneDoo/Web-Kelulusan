@@ -8,6 +8,7 @@
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/result.css') }}">
 
     {{-- fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
