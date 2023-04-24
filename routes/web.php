@@ -10,9 +10,6 @@ Route::get('/', function () {
 });
 
 Route::post('/', function(Request $request){
-    $fileName = time().".".$request->file->getClientOriginalExtension();
-    $request->file->storeAs('public/files', $fileName);
-    $excel = Excel::import(new UsersImport, asset('storage/files/1681718102.xlsx'));
-    // dd($excel->);
-    // return redirect('/');
+    Excel::import(new UsersImport, $request->file('file'));
+    return redirect('/');
 });
