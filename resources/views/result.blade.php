@@ -31,7 +31,7 @@
     <div class="lefts">
         <div class="searchs-wrapper">
             <form action="">
-                <input type="search" class="searchs" id="search" placeholder="Nomor Induk Siswa Nasional...">
+                <input type="search" class="searchs" id="search" value="{{ auth()->user()->nisn }}"placeholder="Nomor Induk Siswa Nasional...">
                 <button type="submit">Cari</button>
             </form>
         </div>
@@ -152,7 +152,7 @@
         </div>
         <div class="kompetensi">
             <p>Kompetensi</p>
-            <p>Pengembangan Perangkat Lunak dan Game</p>
+            <p>{{ $jurusan->jurusan->jurusan }}</p>
         </div>
     </div>
 
