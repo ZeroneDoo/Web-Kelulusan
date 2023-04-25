@@ -32,15 +32,15 @@
                       <h6 class="p-3 mb-0 text-sm ">0612345</h6>
                     </td>
                     <td>
-                      <h6 class="p-3 mb-0 text-sm">0867674517</h6>
+                      <h6 class="p-3 mb-0 text-sm">Nahla Naufan</h6>
                     </td>
                     <td>
-                      <h6 class="p-3 mb-0 text-sm">Sheyla Aulya</h6>
+                      <h6 class="p-3 mb-0 text-sm">XI PPLG 2</h6>
                     </td>
                    
                     <td class="align-middle">
                       <div class="d-flex justify-content-center p-3 gap-3">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
+                        <a href="" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
                           Edit
                         </a>
                         <a href="javascript:;" class="text-danger font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">

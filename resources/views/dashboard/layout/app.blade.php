@@ -16,7 +16,7 @@
     <link href="dashboard/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="dashboard/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="dashboard/css/nucleo-svg.css" rel="stylesheet"/>
     <!-- CSS Files -->
     <link id="pagestyle" href="dashboard/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
 </head>
@@ -34,6 +34,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="dashboard/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+
 </body>
 
 </html>
