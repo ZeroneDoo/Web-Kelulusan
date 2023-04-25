@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\JurusanImport;
+use App\Imports\KelasImport;
 use App\Imports\UsersImport;
+use App\Models\Kelas;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -34,7 +37,11 @@ class UserController extends Controller
 
     public function viewMain()
     {
-        return view('result');
+        $user = User::with(['kelas'])->find(auth()->user()->id);
+        $getJurusan = Kelas::with(['jurusan'])->find($user->kelas->id);
+        return view('result', [
+            'jurusan' => $getJurusan
+        ]);
     }
 
     public function generatePdf()
@@ -44,10 +51,22 @@ class UserController extends Controller
         return $pdf->download('testing.pdf');
     }
 
-    public function importExcel(Request $request)
+    public function importExcelUser(Request $request)
     {
         Excel::import(new UsersImport, $request->file('file'));
-        return redirect('/');
+        return "ok";
+    }
+
+    public function importExcelJurusan(Request $request)
+    {
+        Excel::import(new JurusanImport, $request->file('file'));
+        return back();
+    }
+
+    public function importExcelKelas(Request $request)
+    {
+        Excel::import(new KelasImport, $request->file('file'));
+        return back();
     }
 
 }

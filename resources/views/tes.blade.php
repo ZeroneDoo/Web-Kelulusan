@@ -10,7 +10,8 @@
     <a href="{{ route('generatepdf') }}">
         Cetak PDF
     </a>
-    <form action="/" method="post" enctype="multipart/form-data">
+    {{-- route bisa diubah untuk sementara --}}
+    <form action="{{ route('importExcel') }}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="file" id="">
         <button>Kirim</button>
