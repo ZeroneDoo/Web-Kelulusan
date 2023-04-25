@@ -6,21 +6,33 @@ use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Facades\Excel;
 
 Route::get('/', function () {
-    return view('result');
+    return view('home');
 });
 
 Route::get('/mapel', function () {
     return view('dashboard/mapel');
 });
+Route::get('/editmapel', function () {
+    return view('dashboard/editmapel');
+});
 Route::get('/wakel', function () {
     return view('dashboard/waliKelas');
+});
+Route::get('/editwakel', function () {
+    return view('dashboard/editwalikelas');
 });
 Route::get('/siswa', function () {
     return view('dashboard/siswa');
 });
+Route::get('/editsiswa', function () {
+    return view('dashboard/editsiswa');
+});
 
 Route::get('/kelas', function () {
     return view('dashboard/kelas');
+});
+Route::get('/editkelas', function () {
+    return view('dashboard/editkelas');
 });
 
 Route::get('/signin', function () {
