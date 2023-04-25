@@ -1,7 +1,7 @@
 @extends('dashboard/layout/app')
 
 @section('titles')
-    Input Nilai
+    Masukan Nilai
 @endsection
 
 @section('content')
