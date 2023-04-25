@@ -1,4 +1,4 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " style="z-index: -1"
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " style="z-index: 0"
     id="sidenav-main">
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
@@ -100,7 +100,7 @@
                             @endif
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Masukan Nilai</span>
+                    <span class="nav-link-text ms-1">Nilai Siswa</span>
                 </a>
             </li>
           
