@@ -132,23 +132,23 @@
     <div class="rights">
         <div class="nisn">
             <p>NISN</p>
-            <p>0612345678</p>
+            <p>{{ auth()->user()->nisn }}</p>
         </div>
         <div class="nipd">
             <p>NIPD</p>
-            <p>0612345678</p>
+            <p>{{ auth()->user()->nipd }}</p>
         </div>
         <div class="nama">
             <p>Nama</p>
-            <p>Sheyla Aulya</p>
+            <p>{{ auth()->user()->nama_siswa }}</p>
         </div>
         <div class="tempat-lahir">
             <p>Tempat Lahir</p>
-            <p>Jakarta</p>
+            <p>{{ auth()->user()->tempat_lahir }}</p>
         </div>
         <div class="tgl-lahir">
             <p>Tanggal Lahir</p>
-            <p>24 - 03 - 2006</p>
+            <p>{{ auth()->user()->tanggal_lahir }}</p>
         </div>
         <div class="kompetensi">
             <p>Kompetensi</p>

@@ -63,11 +63,11 @@
         <div class="bottom">
             <p>Masukkan NISN untuk melihat data kelulusan mu !</p>
             <div class="search-wrapper">
-                <form action="">
-                    <input type="search" class="search" id="search" placeholder="Nomor Induk Siswa Nasional...">
+                <form action="{{ route('home.post') }}" method="POST">
+                    @csrf
+                <input type="search" class="search" id="search" name="nisn" autocomplete="off" placeholder="Nomor Induk Siswa Nasional...">
                     <button type="submit">Cari</button>
                 </form>
-                
             </div>
         </div>
     </div>

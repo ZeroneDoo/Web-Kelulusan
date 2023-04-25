@@ -52,7 +52,7 @@
                  
                   <td class="align-middle">
                     <div class="d-flex justify-content-center p-3 gap-3">
-                      <a href="/editsiswa" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
+                      <a href="" class="text-secondary font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
                         Edit
                       </a>
                       <a href="javascript:;" class="text-danger font-weight-bold text-sm" data-toggle="tooltip" data-original-title="Edit user">
