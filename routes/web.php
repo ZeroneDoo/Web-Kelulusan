@@ -22,7 +22,7 @@ Route::controller(UserController::class)->group(function(){
     
         // import excel
         Route::post('/', 'importExcelUser')->name('importExcel'); // import data user
-        Route::post('/jurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
+        Route::post('/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
         Route::post('/kelas', 'importExcelKelas')->name('importExcelKelas'); // import data kelas
     
         // pdf
@@ -34,10 +34,19 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(KurikulumController::class)->group(function(){
     // get
     Route::get('/mapel', 'viewMapel');
+    Route::get('/jurusan', 'viewJurusan');
     Route::get('/wakel', 'viewWakel');
     Route::get('/siswa', 'viewSiswa');
     Route::get('/kelas', 'viewKelas');
     Route::get('/signin', 'viewSignin');
     Route::get('/signup', 'viewSignup');
     Route::get('/inputnilai', 'viewInputNilai');
+
+    // edit
+    Route::get('/mapel/{id}', 'editMapel')->name('edit.mapel');
+    Route::get('/jurusan/{id}', 'editJurusan')->name('edit.jurusan');
+    Route::get('/wakel/{id}', 'editWakel')->name('edit.wakel');
+    Route::get('/siswa/{id}', 'editSiswa')->name('edit.siswa');
+    Route::get('/kelas/{id}', 'editKelas')->name('edit.kelas');
+    Route::get('/inputnilai/{id}', 'editInputNilai')->name('edit.inputNilai');
 });
