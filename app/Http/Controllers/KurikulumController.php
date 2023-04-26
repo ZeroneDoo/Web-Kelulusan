@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\JurusanImport;
+use App\Imports\KelasImport;
+use App\Imports\UsersImport;
 use App\Models\Jurusan;
 use App\Models\Kelas;
 use App\Models\Matpel;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class KurikulumController extends Controller
 {
@@ -100,5 +104,23 @@ class KurikulumController extends Controller
     public function editInputNilai($id)
     {
         return view('dashboard/editinputNilai');
+    }
+
+    public function importExcelUser(Request $request)
+    {
+        Excel::import(new UsersImport, $request->file('file'));
+        return back();
+    }
+
+    public function importExcelJurusan(Request $request)
+    {
+        Excel::import(new JurusanImport, $request->file('file'));
+        return back();
+    }
+
+    public function importExcelKelas(Request $request)
+    {
+        Excel::import(new KelasImport, $request->file('file'));
+        return back();
     }
 }

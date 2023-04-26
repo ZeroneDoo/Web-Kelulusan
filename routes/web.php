@@ -20,11 +20,6 @@ Route::controller(UserController::class)->group(function(){
         // get
         Route::get('/', 'viewMain')->name('main');
     
-        // import excel
-        Route::post('/', 'importExcelUser')->name('importExcel'); // import data user
-        Route::post('/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
-        Route::post('/kelas', 'importExcelKelas')->name('importExcelKelas'); // import data kelas
-    
         // pdf
         Route::get('/generatepdf', 'generatePdf')->name('generatepdf');
     // });
@@ -42,6 +37,11 @@ Route::controller(KurikulumController::class)->group(function(){
     Route::get('/signup', 'viewSignup');
     Route::get('/inputnilai', 'viewInputNilai');
 
+    // import excel
+    Route::post('/', 'importExcelUser')->name('importExcel'); // import data user
+    Route::post('/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
+    Route::post('/kelas', 'importExcelKelas')->name('importExcelKelas'); // import data kelas
+
     // edit
     Route::get('/mapel/{id}', 'editMapel')->name('edit.mapel');
     Route::get('/jurusan/{id}', 'editJurusan')->name('edit.jurusan');
@@ -49,4 +49,12 @@ Route::controller(KurikulumController::class)->group(function(){
     Route::get('/siswa/{id}', 'editSiswa')->name('edit.siswa');
     Route::get('/kelas/{id}', 'editKelas')->name('edit.kelas');
     Route::get('/inputnilai/{id}', 'editInputNilai')->name('edit.inputNilai');
+
+    // put
+    Route::put('/mapel/{id}', 'putMapel')->name('put.mapel');
+    Route::put('/jurusan/{id}', 'putJurusan')->name('put.jurusan');
+    Route::put('/wakel/{id}', 'putWakel')->name('put.wakel');
+    Route::put('/siswa/{id}', 'putSiswa')->name('put.siswa');
+    Route::put('/kelas/{id}', 'putKelas')->name('put.kelas');
+    Route::put('/inputnilai/{id}', 'putInputNilai')->name('put.inputNilai');
 });

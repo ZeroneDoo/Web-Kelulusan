@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Imports\JurusanImport;
-use App\Imports\KelasImport;
-use App\Imports\UsersImport;
 use App\Models\Kelas;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
-use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -50,23 +46,4 @@ class UserController extends Controller
         $pdf = Pdf::loadView('page.testing', ['data' => 1]);
         return $pdf->download('testing.pdf');
     }
-
-    public function importExcelUser(Request $request)
-    {
-        Excel::import(new UsersImport, $request->file('file'));
-        return "ok";
-    }
-
-    public function importExcelJurusan(Request $request)
-    {
-        Excel::import(new JurusanImport, $request->file('file'));
-        return back();
-    }
-
-    public function importExcelKelas(Request $request)
-    {
-        Excel::import(new KelasImport, $request->file('file'));
-        return back();
-    }
-
 }
