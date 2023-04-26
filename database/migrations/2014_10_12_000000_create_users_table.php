@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nisn');
             $table->string('nipd');
             $table->string('nama_siswa');
-            $table->foreignId('kelas_id');
+            $table->foreignId('kelas_id')->onDelete('cascade');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->boolean("ukk")->default(0);

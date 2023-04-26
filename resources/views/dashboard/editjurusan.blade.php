@@ -13,7 +13,7 @@ Ubah Jurusan
                 </div>
 
                 <div class="card-body px-5 pt-3 pb-2">
-                    <form>
+                    <form action="{{ route('put.jurusan', ['id'=> $jurusan->id]) }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="nama" class="text-sm">Nama Jurusan</label>

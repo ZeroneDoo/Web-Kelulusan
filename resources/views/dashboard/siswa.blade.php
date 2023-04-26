@@ -88,7 +88,7 @@
                         <h6 class="p-3 mb-0 text-sm">{{ $siswa->tanggal_lahir }}</h6>
                       </td>
                       <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ App\Models\Kelas::with(['jurusan'])->find($siswa->kelas_id)->jurusan->jurusan }}</h6>
+                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->kelas->kelas }}</h6>
                       </td>
                     
                       <td class="align-middle">
@@ -97,7 +97,7 @@
                                 data-toggle="tooltip" data-original-title="Edit user">
                                 Edit
                             </a>
-                            <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                            <a href="{{ route('delete.siswa', ['id' => $siswa->id]) }}" class="text-danger font-weight-bold text-sm text-decoration-none"
                                 data-toggle="tooltip" data-original-title="Edit user">
                                 Hapus
                             </a>

@@ -16,26 +16,26 @@ Route::controller(UserController::class)->group(function(){
     Route::post('/waiting', 'postHome')->name('home.post')->middleware('guest');   
 
     // jika belum login
-    // Route::middleware(['auth'])->group(function(){
+    Route::middleware(['auth'])->group(function(){
         // get
         Route::get('/', 'viewMain')->name('main');
     
         // pdf
         Route::get('/generatepdf', 'generatePdf')->name('generatepdf');
-    // });
+    });
 
 });
 
 Route::controller(KurikulumController::class)->group(function(){
     // get
-    Route::get('/mapel', 'viewMapel');
-    Route::get('/jurusan', 'viewJurusan');
-    Route::get('/wakel', 'viewWakel');
-    Route::get('/siswa', 'viewSiswa');
-    Route::get('/kelas', 'viewKelas');
-    Route::get('/signin', 'viewSignin');
-    Route::get('/signup', 'viewSignup');
-    Route::get('/inputnilai', 'viewInputNilai');
+    Route::get('/mapel', 'viewMapel')->name("view.mapel");
+    Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");
+    Route::get('/wakel', 'viewWakel')->name("view.wakel");
+    Route::get('/siswa', 'viewSiswa')->name("view.siswa");
+    Route::get('/kelas', 'viewKelas')->name("view.kelas");
+    Route::get('/signin', 'viewSignin')->name("view.signIn");
+    Route::get('/signup', 'viewSignup')->name("view.signUp");
+    Route::get('/inputnilai', 'viewInputNilai')->name("view.inputNilai");
 
     // import excel
     Route::post('/', 'importExcelUser')->name('importExcel'); // import data user
@@ -51,10 +51,18 @@ Route::controller(KurikulumController::class)->group(function(){
     Route::get('/inputnilai/{id}', 'editInputNilai')->name('edit.inputNilai');
 
     // put
-    Route::put('/mapel/{id}', 'putMapel')->name('put.mapel');
-    Route::put('/jurusan/{id}', 'putJurusan')->name('put.jurusan');
-    Route::put('/wakel/{id}', 'putWakel')->name('put.wakel');
-    Route::put('/siswa/{id}', 'putSiswa')->name('put.siswa');
-    Route::put('/kelas/{id}', 'putKelas')->name('put.kelas');
-    Route::put('/inputnilai/{id}', 'putInputNilai')->name('put.inputNilai');
+    Route::post('/mapel/{id}', 'putMapel')->name('put.mapel');
+    Route::post('/jurusan/{id}', 'putJurusan')->name('put.jurusan');
+    Route::post('/wakel/{id}', 'putWakel')->name('put.wakel');
+    Route::post('/siswa/{id}', 'putSiswa')->name('put.siswa');
+    Route::post('/kelas/{id}', 'putKelas')->name('put.kelas');
+    Route::post('/inputnilai/{id}', 'putInputNilai')->name('put.inputNilai');
+
+    // delete
+    Route::get('/delmapel/{id}', 'deleteMapel')->name('delete.mapel');
+    Route::get('/deljurusan/{id}', 'deleteJurusan')->name('delete.jurusan');
+    Route::get('/delwakel/{id}', 'deleteWakel')->name('delete.wakel');
+    Route::get('/delsiswa/{id}', 'deleteSiswa')->name('delete.siswa');
+    Route::get('/delkelas/{id}', 'deleteKelas')->name('delete.kelas');
+    Route::get('/delinputnilai/{id}', 'deleteInputNilai')->name('delete.inputNilai');
 });
