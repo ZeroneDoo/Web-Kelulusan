@@ -22449,7 +22449,7 @@ hr.horizontal.gray-light {
 
     .navbar-vertical.navbar-expand-sm .navbar-collapse {
         display: block;
-        overflow: auto;
+        z
         height: calc(100vh - 360px)
     }
 
@@ -22549,7 +22549,7 @@ hr.horizontal.gray-light {
 
     .navbar-vertical.navbar-expand-md .navbar-collapse {
         display: block;
-        overflow: auto;
+        z
         height: calc(100vh - 360px)
     }
 
@@ -22649,7 +22649,7 @@ hr.horizontal.gray-light {
 
     .navbar-vertical.navbar-expand-lg .navbar-collapse {
         display: block;
-        overflow: auto;
+        z
         height: calc(100vh - 360px)
     }
 
@@ -22749,7 +22749,7 @@ hr.horizontal.gray-light {
 
     .navbar-vertical.navbar-expand-xl .navbar-collapse {
         display: block;
-        overflow: auto;
+        z
         height: calc(100vh - 360px)
     }
 
@@ -22849,7 +22849,7 @@ hr.horizontal.gray-light {
 
     .navbar-vertical.navbar-expand-xxl .navbar-collapse {
         display: block;
-        overflow: auto;
+        z
         height: calc(100vh - 360px)
     }
 
@@ -26038,7 +26038,7 @@ pre[class*=language-] ::selection {
 
 pre[class*=language-] {
     padding: 1em;
-    overflow: auto;
+    z
     border-radius: .75rem
 }
 

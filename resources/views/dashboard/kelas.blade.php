@@ -52,51 +52,44 @@ Kelas
                 </div>
             </div>
             
-                <div class="card-body px-0 pt-0 pb-2">
-                    <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
-                            <thead>
-                                <tr>
-                                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama
-                                        Kelas</th>
-                                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-                                        Jurusan</th>
-                                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">
-                                    </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($datakelas as $kelas)
-                                    <tr>
-                                        <td class="p-4">
-                                            <h6 class="mb-0 text-sm">{{ $kelas->kelas }}</h6>
-                                        </td>
-                                        <td class="p-4">
-                                            <h6 class="mb-0 text-sm">{{ $kelas->jurusan->jurusan }}</h6>
-                                        </td>
-
-                                        <td class="align-middle">
-                                            <div class="d-flex justify-content-center p-3 gap-3">
-                                                <a href="{{ route('edit.kelas', ['id' =>$kelas->id]) }}" class="text-secondary font-weight-bold text-sm text-decoration-none"
-                                                    data-toggle="tooltip" data-original-title="Edit user">
-                                                    Edit
-                                                </a>
-                                                <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
-                                                    data-toggle="tooltip" data-original-title="Edit user">
-                                                    Hapus
-                                                </a>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                @endforeach
-
-
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0" style="max-height: 460px; overflow-y: scroll;">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama Kelas</th>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Jurusan</th>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach ($datakelas as $kelas)
+                      <tr>
+                        <td class="p-4">
+                          <h6 class="mb-0 text-sm">{{ $kelas->kelas }}</h6>
+                        </td>
+                        <td class="p-4">
+                          <h6 class="mb-0 text-sm">{{ $kelas->jurusan->jurusan }}</h6>
+                        </td>
+                        <td class="align-middle">
+                          <div class="d-flex justify-content-center p-3 gap-3">
+                            <a href="{{ route('edit.kelas', ['id' =>$kelas->id]) }}" class="text-secondary font-weight-bold text-sm text-decoration-none"
+                              data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                            <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                              data-toggle="tooltip" data-original-title="Edit user">
+                              Hapus
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+              
             </div>
         </div>
     </div>
