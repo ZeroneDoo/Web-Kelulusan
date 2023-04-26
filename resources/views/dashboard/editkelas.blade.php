@@ -13,15 +13,15 @@ Ubah Data Kelas
                 </div>
 
                 <div class="card-body px-5 pt-3 pb-2">
-                    <form method="post">
+                    <form action="{{ route('put.kelas', ['id' => $kelas->id]) }}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="nama_kelas" class="text-sm">Kelas</label>
-                            <input type="text" name="kelas" class="form-control" id="nama_kelas" value="X PPLG 1">
+                            <input type="text" name="kelas" class="form-control" id="nama_kelas" value="{{ $kelas->kelas }}">
                           </div>
                           <div class="form-group">
                             <label for="jurusan" class="text-sm">Jurusan</label>
-                            <select class="form-control form-control" id="jurusan" name="jurusan">
+                            <select class="form-control form-control" id="jurusan" name="jurusan_id">
                                 <option value="" selected hidden>Jurusan</option>
                                 @foreach ($jurusans as $jurusan)
                                     <option value="{{ $jurusan->id }}" {{ $kelas->jurusan_id == $jurusan->id ? 'selected' : ''}}>{{ $jurusan->jurusan }}</option>

@@ -25,6 +25,19 @@ class KurikulumController extends Controller
             "mapel" => $findData
         ]);
     }
+    public function putMapel(Request $request, $id)
+    {
+        $findData = Matpel::find($id);
+        return view('dashboard/editmapel',[
+            "mapel" => $findData
+        ]);
+    }
+    public function deleteMapel($id)
+    {
+        $findData = Matpel::find($id);
+        $findData->delete();
+        return redirect()->route('view.mapel');
+    }
 
     public function viewJurusan()
     {
@@ -39,6 +52,22 @@ class KurikulumController extends Controller
         return view('dashboard/editjurusan', [
             'jurusan' => $findData
         ]);
+    }
+    public function putJurusan(Request $request, $id)
+    {
+        $request->validate([
+            'jurusan' => 'required'
+        ]);
+
+        $findData = Jurusan::find($id);
+        $findData->update(['jurusan' => $request->jurusan]);
+        return redirect()->route('view.jurusan');
+    }
+    public function deleteJurusan($id)
+    {
+        $findData = Jurusan::find($id);
+        $findData->delete();
+        return redirect()->route('view.jurusan');
     }
 
     public function viewWakel()
@@ -61,13 +90,30 @@ class KurikulumController extends Controller
     public function editSiswa($id)
     {
         $findData = User::with(['kelas'])->find($id);
-        $jurusan = Jurusan::all();
-        $findJurusan = Kelas::with(['jurusan'])->find($findData->kelas->id);
+        $dataKelas = Kelas::with(['jurusan'])->get();
         return view('dashboard/editsiswa', [
             'siswa' => $findData,
-            'findJurusan' => $findJurusan,
-            'jurusans'=>$jurusan
+            "dataKelas" => $dataKelas
         ]);
+    }
+    public function putSiswa(Request $request, $id)
+    {
+        $request->validate([
+            'nama_siswa' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'kelas_id' => 'required',
+        ]);
+
+        $findData = User::with(['kelas'])->find($id);
+        $findData->update($request->all());
+        return redirect()->route('view.siswa');
+    }
+    public function deleteSiswa($id)
+    {
+        $findData = User::with(['kelas'])->find($id);
+        $findData->delete();
+        return redirect()->route('view.siswa');
     }
 
     public function viewKelas()
@@ -85,6 +131,21 @@ class KurikulumController extends Controller
             "kelas"=> $findData,
             'jurusans' =>$jurusan
         ]);
+    }
+    public function putKelas(Request $request, $id)
+    {
+        $findData = Kelas::find($id);
+        $findData->update([
+            'kelas' => $request->kelas,
+            'jurusan_id' => $request->jurusan_id,
+        ]);
+        return redirect()->route('view.kelas');
+    }
+    public function deleteKelas($id)
+    {
+        $findData = Kelas::find($id);
+        $findData->delete();
+        return redirect()->route('view.kelas');
     }
 
     public function viewSignin()
@@ -106,6 +167,7 @@ class KurikulumController extends Controller
         return view('dashboard/editinputNilai');
     }
 
+    // import excel
     public function importExcelUser(Request $request)
     {
         Excel::import(new UsersImport, $request->file('file'));

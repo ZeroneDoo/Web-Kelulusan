@@ -13,33 +13,37 @@ Ubah Data Siswa
                 </div>
 
                 <div class="card-body px-5 pt-3 pb-2">
-                    <form>
+                    <form action="{{ route('put.siswa', ['id'=> $siswa->id]) }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="nisn" class="text-sm">NISN</label>
-                            <input type="text" class="form-control" id="nisn" value="{{ $siswa->nisn }}" disabled>
+                            <input type="text" class="form-control" id="nisn" name="nisn" value="{{ $siswa->nisn }}" disabled>
                         </div>
                         <div class="form-group">
                             <label for="nipd" class="text-sm">NIPD</label>
-                            <input type="text" class="form-control" id="nipd" value="{{ $siswa->nipd }}" disabled>
+                            <input type="text" class="form-control" id="nipd" name="nipd" value="{{ $siswa->nipd }}" disabled>
                         </div>
                         <div class="form-group">
                             <label for="nama" class="text-sm">Nama</label>
-                            <input type="text" class="form-control" id="nama" value="{{ $siswa->nama_siswa }}">
+                            <input type="text" class="form-control" id="nama" name="nama_siswa" value="{{ $siswa->nama_siswa }}">
                         </div>
                         <div class="form-group">
                             <label for="tempat_lahir" class="text-sm">Tempat Lahir</label>
-                            <input type="text" class="form-control" id="tempat_lahir"value="{{ $siswa->tempat_lahir }}">
+                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ $siswa->tempat_lahir }}">
                         </div>
                         <div class="form-group">
                             <label for="tanggal_lahir" class="text-sm">Tanggal Lahir</label>
-                            <input type="date" class="form-control" id="tanggal_lahir" value="{{ $siswa->tanggal_lahir }}">
+                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $siswa->tanggal_lahir }}">
                         </div>
                         <div class="form-group">
                             <label for="kompetensi" class="text-sm">Kompetensi</label>
-                            <select class="form-control form-control" id="kompetensi" name="jurusan">
+                            <select class="form-control form-control" id="kompetensi" name="kelas_id">
                                 <option value="" selected hidden>Kompetensi</option>
-                                @foreach ($jurusans as $jurusan)
+                                {{-- @foreach ($jurusans as $jurusan)
                                     <option value="{{ $jurusan->id }}" {{ $findJurusan->jurusan->id == $jurusan->id ? 'selected' : '' }}>{{ $jurusan->jurusan }}</option>   
+                                @endforeach --}}
+                                @foreach ($dataKelas as $kelas)
+                                    <option value="{{ $kelas->id }}" {{ $kelas->id == $siswa->kelas_id ? 'selected' : '' }}>{{ $kelas->kelas }}</option>   
                                 @endforeach
                             </select>
                         </div>

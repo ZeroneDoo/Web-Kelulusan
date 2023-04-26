@@ -73,7 +73,7 @@
                             <h6 class="p-3 mb-0 text-sm">{{ $jurusan->created_at->diffForHumans(); }}</h6>
                         </td>
                         <td>
-                            <h6 class="p-3 mb-0 text-sm">{{ $jurusan->created_at->diffForHumans(); }}</h6>
+                            <h6 class="p-3 mb-0 text-sm">{{ $jurusan->updated_at->diffForHumans(); }}</h6>
                         </td>
                         
                         <td class="align-middle">
@@ -82,7 +82,7 @@
                                     data-toggle="tooltip" data-original-title="Edit user">
                                     Edit
                                 </a>
-                                <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                                <a href="{{ route('delete.jurusan', ['id' => $jurusan->id]) }}" class="text-danger font-weight-bold text-sm text-decoration-none"
                                     data-toggle="tooltip" data-original-title="Edit user">
                                     Hapus
                                 </a>

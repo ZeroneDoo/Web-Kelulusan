@@ -77,7 +77,7 @@ Kelas
                               data-toggle="tooltip" data-original-title="Edit user">
                               Edit
                             </a>
-                            <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                            <a href="{{ route('delete.kelas', ['id' => $kelas->id]) }}" class="text-danger font-weight-bold text-sm text-decoration-none"
                               data-toggle="tooltip" data-original-title="Edit user">
                               Hapus
                             </a>
