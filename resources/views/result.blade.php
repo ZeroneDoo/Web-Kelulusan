@@ -114,7 +114,7 @@
                     <p>Lihat Surat Kelulusan</p>
                 </button>
             </a>
-            <a href="">
+            <a href="{{ route('generatepdf') }}">
                 <button >
                     <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
                     <p>Unduh Surat Kelulusan</p>

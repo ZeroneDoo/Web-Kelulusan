@@ -44,6 +44,7 @@ class UserController extends Controller
     {
         // emang merah kyk gini
         $pdf = Pdf::loadView('page.testing', ['data' => 1]);
-        return $pdf->download('testing.pdf');
+        $pdf->save('Surat Kelulusan.pdf');
+        return $pdf->stream('Surat Kelulusan.pdf');
     }
 }
