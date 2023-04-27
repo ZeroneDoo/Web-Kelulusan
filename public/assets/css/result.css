@@ -102,9 +102,11 @@ table th:nth-child(3) {
     justify-content: space-between;
     margin-top: 15px;
     gap: 15px;
+ 
 }
 
 .buttons button {
+    cursor: pointer;
     padding: 0px 60px;
     display: flex;
     align-items: center;
@@ -119,7 +121,7 @@ table th:nth-child(3) {
 
 .buttons .logout{
     font-size: 14px;
-    padding: 0px 120px;
+    padding: 0px 115px;
     background-color: #E74646;
     color: white;
 }
