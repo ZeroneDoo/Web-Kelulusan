@@ -19,6 +19,11 @@ class User extends Authenticatable
         return $this->belongsTo(Kelas::class);
     }
 
+    public function jurusan()
+    {
+        return $this->belongsTo(Jurusan::class);
+    }
+
     public function matpels()
     {
         return $this->belongsToMany(Matpel::class, UserMatpel::class);

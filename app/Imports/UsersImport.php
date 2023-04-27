@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use App\Models\Kelas;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
@@ -17,20 +18,26 @@ class UsersImport implements ToModel, WithHeadingRow
     */
     public function model(array $row)
     {   
+        if($row['n_i_s_n']){
         // dd($row);
         // SELECT 38019 AS date_5_num, DATE('1899-12-30') + INTERVAL 38019 DAY AS normal_date;
-        $tanggal_number = $row['tanggal_lahir'];
-        $tanggal_normal = DB::select("SELECT DATE('1899-12-30') + INTERVAL $tanggal_number DAY AS normal_date")[0]->normal_date;
-        
-        $idKelas = Kelas::where('kelas', $row['kelas'])->pluck('id')[0];
+        if($row['kode_jurusan'] == 1){
+            $tanggal_number = $row['tanggal_lahir'];
+            $tanggal_normal = DB::select("SELECT DATE('1899-12-30') + INTERVAL $tanggal_number DAY AS normal_date")[0]->normal_date;
+            $tanggal = Carbon::now("Asia/Jakarta")->parse($tanggal_normal)->translatedFormat("d F Y");
+        }
+        // $idKelas = Kelas::where('kelas', $row['kelas'])->pluck('id')[0];
 
-        return new User([
-            'nama_siswa' => $row['nama'],
-            'nisn' => $row['nisn'],
-            'nipd' => $row['nipd'],
-            'kelas_id' => $idKelas,
-            'tempat_lahir' => $row['tempat_lahir'],
-            'tanggal_lahir' => $tanggal_normal,
-        ]);
+            return new User([
+                'nama_siswa' => $row['nama_peserta_didik'],
+                'nisn' => $row['n_i_s_n'],
+                'nipd' => $row['n_i_p_d'],
+                'jenis_kelamin' => $row['l_p'],
+                // 'kelas_id' => $idKelas,
+                'jurusan_id' => $row['kode_jurusan'],
+                'tempat_lahir' => $row['tempat_lahir'],
+                'tanggal_lahir' => $row['kode_jurusan'] == 1 ? $tanggal : $row['tanggal_lahir'],
+            ]);
+        }
     }
 }
