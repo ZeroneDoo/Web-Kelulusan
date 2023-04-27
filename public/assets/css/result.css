@@ -1,4 +1,6 @@
-.announce p:first-child{
+
+
+.announce p:first-child {
     font-size: 20px;
     color: white;
     font-weight: 800;
@@ -6,127 +8,108 @@
     word-spacing: 5px;
 }
 
-.searchs{
+.searchs {
     padding: 12px 20px;
     width: 55vw;
     border-radius: 15px;
     font-size: 18px;
 }
 
-.searchs-wrapper input{
+.searchs-wrapper input {
     border: 0.5px solid rgba(0, 0, 0, 0.418);
     font-weight: 700;
 }
-.searchs-wrapper button{
+
+.searchs-wrapper button {
     padding: 10px;
     width: 120px;
     border-radius: 20px;
     font-size: 18px;
     background-color: #FF9900;
     font-weight: 800;
-    color: white; 
+    color: white;
     border: transparent;
 }
 
-.announce p:first-child span{
+.announce p:first-child span:last-child {
     color: #FF9900;
     font-size: 23px;
 }
 
-.announce p:last-child{
+.announce p:last-child {
     font-size: 20px;
     color: white;
     font-weight: 800;
     margin-top: 10px;
 }
 
-.scores{
+.scores {
     padding: 10px 20px;
     width: 95%;
-    height: 50vh;
+    height: 53vh;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.headers{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    
-}
 
-.headers p{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-.date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border: 0.5px solid black;
-    height: 30px;
-    padding: 5px 15px;
-    border-radius: 20px;
-    opacity: 0.7;
-}
-
-.date p{
-    font-size: 15px;
-}
-
-.bodys{
+.bodys {
+    margin-top: 10px;
     overflow-y: scroll;
-    height: 38vh;
+    height: 50vh;
     padding: 0px 10px;
 }
 
-table{
+table {
     font-size: 18px;
 }
 
-table th:first-child{
+table tr {
+    height: 45px;
+}
+
+table th:first-child {
     width: 20px;
     text-align: center;
 
 }
 
-table th:nth-child(2){
+table th:nth-child(2) {
     width: 50vw;
     text-align: start;
-    padding-left    : 25px;
+    padding-left: 25px;
 }
 
-table td:nth-child(1){
+table td:nth-child(1) {
     text-align: center;
 }
 
-table td:nth-child(2){
+table td:nth-child(2) {
     padding-left: 25px;
 
 }
-table td:nth-child(3){
+
+table td:nth-child(3) {
     text-align: center;
 }
-table th:nth-child(3){
+
+table th:nth-child(3) {
     width: 50px;
 }
 
-.buttons{
-
+.buttons {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 15px;
+    gap: 15px;
 }
 
-.buttons button{
-    padding: 0px 40px;
+.buttons button {
+    padding: 0px 60px;
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
     border-radius: 15px;
     border: transparent;
@@ -134,29 +117,64 @@ table th:nth-child(3){
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.rights{
+.buttons .logout{
+    font-size: 14px;
+    padding: 0px 120px;
+    background-color: #E74646;
+    color: white;
+}
+
+.rights-top {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 30px;
     width: 20vw;
-    height: 70vh;
+    height: 60vh;
     background-color: white;
     border-radius: 20px;
 }
-.rights p:first-child{
+
+.data-diri {
+    overflow: auto;
+
+}
+
+.data-diri p:first-child {
     font-weight: 700;
     opacity: 0.5;
 }
-.rights p:last-child{
+
+.data-diri p:last-child {
     font-weight: 600;
 }
 
 
-.nisn, .nipd, .nama, .tempat-lahir, .tgl-lahir {
+.nisn,
+.nipd,
+.nama,
+.tempat-lahir,
+.tgl-lahir {
     line-height: 15px;
 }
 
-.kompetensi{
+.kompetensi {
     line-height: 20px;
+}
+.note{
+    margin-top: -10px;
+    color: white;
+}
+.note h5{
+    font-size: 16px;
+}
+
+.note h5 span{
+    color: #FF9900;
+}
+
+.syarat{
+    margin-top: -10px;
+    line-height: 5px;
+    font-size: 14px;
 }

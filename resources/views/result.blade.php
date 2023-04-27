@@ -29,24 +29,12 @@
 <div class="content">
 
     <div class="lefts">
-        <div class="searchs-wrapper">
-            <form action="">
-                <input type="search" class="searchs" id="search" value="{{ auth()->user()->nisn }}"placeholder="Nomor Induk Siswa Nasional...">
-                <button type="submit">Cari</button>
-            </form>
-        </div>
         <div class="announce">
-            <p>Selamat anda dinyatakan <span>LULUS !</span> dengan nilai Ujian Sekolah sebagai berikut
+            <p>Selamat <span>{{ auth()->user()->nama_siswa }}</span> anda dinyatakan <span>LULUS !</span>
             </p>
         </div>
         <div class="scores">
-            <div class="headers">
-                <p>Nilai Ujian Sekolah</p>
-                <div class="date">
-                    <iconify-icon style="font-size: 22px" icon="material-symbols:calendar-month"></iconify-icon>
-                    <p>3 - 8 April 2023</p>
-                </div>
-            </div>
+            
             <div class="bodys">
                 <table>
                     <tr>
@@ -107,52 +95,64 @@
                 </table>
             </div>
         </div>
+        <div class="note">
+            <h5>Catatan Tambahan ! untuk bisa mengunduh surat kelulusan berikut beberapa <span>Syarat Kelulusan</span> yang harus dipenuhi : </h5>
+            <div class="syarat">
+                <p>- Siswa telah melaksanakan UKK internal dan eksternal</p>
+                <p>- Siswa telah melaksanakan US praktek teori dan Praktek</p>
+                <p>- Siswa telah mengumpulkan laporan dan jurnal prakerin</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="rights">
+        <div class="rights-top">
+            <div class="data-diri">
+
+                <div class="nisn">
+                    <p>NISN</p>
+                    <p>{{ auth()->user()->nisn }}</p>
+                </div>
+                <div class="nipd">
+                    <p>NIPD</p>
+                    <p>{{ auth()->user()->nipd }}</p>
+                </div>
+                <div class="nama">
+                    <p>Nama</p>
+                    <p>{{ auth()->user()->nama_siswa }}</p>
+                </div>
+                <div class="tempat-lahir">
+                    <p>Tempat Lahir</p>
+                    <p>{{ auth()->user()->tempat_lahir }}</p>
+                </div>
+                <div class="tgl-lahir">
+                    <p>Tanggal Lahir</p>
+                    <p>{{ auth()->user()->tanggal_lahir }}</p>
+                </div>
+                <div class="kompetensi">
+                    <p>Kompetensi</p>
+                    <p>{{ $jurusan->jurusan->jurusan }}</p>
+                </div>
+            </div>
+        </div>
+        
         <div class="buttons">
-            <a href="">
-                <button >
-                    <iconify-icon style="font-size: 25px" icon="material-symbols:open-in-new-down"></iconify-icon>
-                    <p>Lihat Surat Kelulusan</p>
-                </button>
-            </a>
+           
             <a href="">
                 <button >
                     <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
                     <p>Unduh Surat Kelulusan</p>
                 </button>
             </a>
+
             <a href="">
-                <button >
-                    <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
-                    <p>Unduh Transkrip nilai</p>
+                <button class="logout">
+                    <iconify-icon icon="solar:logout-2-bold" style="color: white; font-size:25px;"></iconify-icon>
+                    <p>Keluar</p>
                 </button>
             </a>
-        </div>
-    </div>
-
-    <div class="rights">
-        <div class="nisn">
-            <p>NISN</p>
-            <p>{{ auth()->user()->nisn }}</p>
-        </div>
-        <div class="nipd">
-            <p>NIPD</p>
-            <p>{{ auth()->user()->nipd }}</p>
-        </div>
-        <div class="nama">
-            <p>Nama</p>
-            <p>{{ auth()->user()->nama_siswa }}</p>
-        </div>
-        <div class="tempat-lahir">
-            <p>Tempat Lahir</p>
-            <p>{{ auth()->user()->tempat_lahir }}</p>
-        </div>
-        <div class="tgl-lahir">
-            <p>Tanggal Lahir</p>
-            <p>{{ auth()->user()->tanggal_lahir }}</p>
-        </div>
-        <div class="kompetensi">
-            <p>Kompetensi</p>
-            <p>{{ $jurusan->jurusan->jurusan }}</p>
+           
         </div>
     </div>
 
