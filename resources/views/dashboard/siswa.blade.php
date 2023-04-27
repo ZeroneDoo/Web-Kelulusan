@@ -88,7 +88,7 @@
                         <h6 class="p-3 mb-0 text-sm">{{ $siswa->tanggal_lahir }}</h6>
                       </td>
                       <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->kelas->kelas }}</h6>
+                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->jurusan->jurusan }}</h6>
                       </td>
                     
                       <td class="align-middle">

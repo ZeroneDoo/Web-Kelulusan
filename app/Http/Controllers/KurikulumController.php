@@ -82,18 +82,18 @@ class KurikulumController extends Controller
 
     public function viewSiswa()
     {
-        $data = User::orderBy('nama_siswa','asc')->get();
+        $data = User::with(['jurusan'])->orderBy('nama_siswa','asc')->get();
         return view('dashboard/siswa', [
             'siswas' => $data
         ]);
     }
     public function editSiswa($id)
     {
-        $findData = User::with(['kelas'])->find($id);
-        $dataKelas = Kelas::with(['jurusan'])->get();
+        $findData = User::with(['jurusan'])->find($id);
+        $dataJurusan = Jurusan::all();
         return view('dashboard/editsiswa', [
             'siswa' => $findData,
-            "dataKelas" => $dataKelas
+            "dataJurusan" => $dataJurusan
         ]);
     }
     public function putSiswa(Request $request, $id)

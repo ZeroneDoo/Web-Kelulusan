@@ -95,13 +95,25 @@
                 </table>
             </div>
         </div>
-        <div class="note">
-            <h5>Catatan Tambahan ! untuk bisa mengunduh surat kelulusan berikut beberapa <span>Syarat Kelulusan</span> yang harus dipenuhi : </h5>
-            <div class="syarat">
-                <p>- Siswa telah melaksanakan UKK internal dan eksternal</p>
-                <p>- Siswa telah melaksanakan US praktek teori dan Praktek</p>
-                <p>- Siswa telah mengumpulkan laporan dan jurnal prakerin</p>
-            </div>
+        <div class="buttons">
+            <a href="">
+                <button >
+                    <iconify-icon style="font-size: 25px" icon="material-symbols:open-in-new-down"></iconify-icon>
+                    <p>Lihat Surat Kelulusan</p>
+                </button>
+            </a>
+            <a href="{{ route('generatepdf') }}">
+                <button >
+                    <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
+                    <p>Unduh Surat Kelulusan</p>
+                </button>
+            </a>
+            <a href="">
+                <button >
+                    <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
+                    <p>Unduh Transkrip nilai</p>
+                </button>
+            </a>
         </div>
         
     </div>

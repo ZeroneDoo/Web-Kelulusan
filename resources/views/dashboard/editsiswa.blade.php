@@ -33,7 +33,7 @@ Ubah Data Siswa
                         </div>
                         <div class="form-group">
                             <label for="tanggal_lahir" class="text-sm">Tanggal Lahir</label>
-                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $siswa->tanggal_lahir }}">
+                            <input type="text" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $siswa->tanggal_lahir }}">
                         </div>
                         <div class="form-group">
                             <label for="kompetensi" class="text-sm">Kompetensi</label>
@@ -42,8 +42,8 @@ Ubah Data Siswa
                                 {{-- @foreach ($jurusans as $jurusan)
                                     <option value="{{ $jurusan->id }}" {{ $findJurusan->jurusan->id == $jurusan->id ? 'selected' : '' }}>{{ $jurusan->jurusan }}</option>   
                                 @endforeach --}}
-                                @foreach ($dataKelas as $kelas)
-                                    <option value="{{ $kelas->id }}" {{ $kelas->id == $siswa->kelas_id ? 'selected' : '' }}>{{ $kelas->kelas }}</option>   
+                                @foreach ($dataJurusan as $jurusan)
+                                    <option value="{{ $jurusan->id }}" {{ $jurusan->id == $siswa->jurusan_id ? 'selected' : '' }}>{{ $jurusan->jurusan }}</option>   
                                 @endforeach
                             </select>
                         </div>

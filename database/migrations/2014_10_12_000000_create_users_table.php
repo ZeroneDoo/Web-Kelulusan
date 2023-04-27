@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nisn');
-            $table->string('nipd');
+            $table->string('nisn')->unique();
+            $table->string('nipd')->unique();
             $table->string('nama_siswa');
-            $table->foreignId('kelas_id')->onDelete('cascade');
+            $table->enum('jenis_kelamin', ["L", "P"]);
+            // $table->foreignId('kelas_id')->onDelete('cascade');
+            $table->foreignId('jurusan_id')->onDelete('cascade');
             $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
+            $table->string('tanggal_lahir');
             $table->boolean("ukk")->default(0);
             $table->boolean("us")->default(0);
             $table->boolean("laporan")->default(0);
