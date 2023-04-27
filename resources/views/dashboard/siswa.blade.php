@@ -54,14 +54,14 @@
 
           
           <div class="card-body px-0 pt-0 pb-2">
-            <div class="table-responsive p-0">
-              <table class="table align-items-center justify-center mb-0" style="max-height: 460px; overflow-y: scroll;">
+            <div class="table-responsive p-0"  style="height: 460px; overflow-y: scroll;">
+              <table class="table align-items-center justify-center mb-0">
                 <thead>
                   <tr class="">
                     <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NISN</th>
-                    <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NIPD</th>
+                    {{-- <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NIPD</th> --}}
                     <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama</th>
-                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Tempat Lahir</th>
+                    {{-- <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Tempat Lahir</th> --}}
                     <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Tanggal Lahir</th>
 
                     <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Kompetensi</th>
@@ -73,22 +73,22 @@
                   @foreach ($siswas as $siswa)
                     <tr class="">
                       <td>
-                        <h6 class="p-3 mb-0 text-sm ">{{ $siswa->nisn }}</h6>
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->nisn }}</p>
+                      </td>
+                      {{-- <td>
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->nipd }}</p>
+                      </td> --}}
+                      <td>
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->nama_siswa }}</p>
+                      </td>
+                      {{-- <td>
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->tempat_lahir }}</p>
+                      </td> --}}
+                      <td>
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->tanggal_lahir }}</p>
                       </td>
                       <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->nipd }}</h6>
-                      </td>
-                      <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->nama_siswa }}</h6>
-                      </td>
-                      <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->tempat_lahir }}</h6>
-                      </td>
-                      <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->tanggal_lahir }}</h6>
-                      </td>
-                      <td>
-                        <h6 class="p-3 mb-0 text-sm">{{ $siswa->jurusan->jurusan }}</h6>
+                        {{-- <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->jurusan->jurusan }}</p> --}}
                       </td>
                     
                       <td class="align-middle">
