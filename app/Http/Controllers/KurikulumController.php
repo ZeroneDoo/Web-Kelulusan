@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\InputNilaiImport;
 use App\Imports\JurusanImport;
 use App\Imports\KelasImport;
+use App\Imports\MatpelImport;
 use App\Imports\UsersImport;
 use App\Models\Jurusan;
 use App\Models\Kelas;
@@ -16,7 +18,8 @@ class KurikulumController extends Controller
 {
     public function viewMapel()
     {
-        return view('dashboard/mapel');
+        $data = Matpel::all();
+        return view('dashboard/mapel', ['mapels' => $data]);
     }
     public function editMapel($id)
     {
@@ -185,4 +188,5 @@ class KurikulumController extends Controller
         Excel::import(new KelasImport, $request->file('file'));
         return back();
     }
+
 }

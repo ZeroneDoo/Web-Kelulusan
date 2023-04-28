@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("mata_pelajaran");
             $table->string("jurusan")->default("all");
-            $table->integer("kkm");
+            $table->integer("kkm")->nullable();
             $table->timestamps();
         });
     }

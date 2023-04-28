@@ -20,7 +20,8 @@
                 <div class="modal fade z-index 1050" id="modals" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="1050" aria-labelledby="modalsLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <form action="">
+                        <form action="{{ route('importExcelMapel') }}" method="POST" enctype="multipart/form-data">
+                          @csrf
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="modalsLabel">Impor Data </h1>
@@ -37,7 +38,7 @@
                                         </div>
                                         <span class="header">Tekan & Lepaskan</span>
                                         <span class="header">atau <span class="button">Cari</span></span>
-                                        <input type="file" id="file-input" multiple hidden>
+                                        <input type="file" id="file-input" name="file" multiple hidden>
 
                                     </div>
                                 </div>
@@ -63,32 +64,34 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="">
-                    <td>
-                      <h6 class="p-3 mb-0 text-sm ">Matematika</h6>
-                    </td>
-                    <td>
-                      <h6 class="p-3 mb-0 text-sm">90</h6>
-                    </td>
-                    <td>
-                      <h6 class="p-3 mb-0 text-sm">---</h6>
-                    </td>
+                  @foreach ($mapels as $mapel)
+                    <tr class="">
+                      <td>
+                        <h6 class="p-3 mb-0 text-sm ">{{ $mapel->mata_pelajaran }}</h6>
+                      </td>
+                      <td>
+                        <h6 class="p-3 mb-0 text-sm">{{ $mapel->created_at->diffForHumans() }}</h6>
+                      </td>
+                      <td>
+                        <h6 class="p-3 mb-0 text-sm">{{ $mapel->updated_at->diffForHumans() }}</h6>
+                      </td>
+                      
                     
-                   
-                    <td class="align-middle">
-                      <div class="d-flex justify-content-center p-3 gap-3">
-                          <a href="" class="text-secondary font-weight-bold text-sm text-decoration-none"
-                              data-toggle="tooltip" data-original-title="Edit user">
-                              Edit
-                          </a>
-                          <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
-                              data-toggle="tooltip" data-original-title="Edit user">
-                              Hapus
-                          </a>
-                      </div>
+                      <td class="align-middle">
+                        <div class="d-flex justify-content-center p-3 gap-3">
+                            <a href="" class="text-secondary font-weight-bold text-sm text-decoration-none"
+                                data-toggle="tooltip" data-original-title="Edit user">
+                                Edit
+                            </a>
+                            <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                                data-toggle="tooltip" data-original-title="Edit user">
+                                Hapus
+                            </a>
+                        </div>
 
-                  </td>
-                  </tr>
+                      </td>
+                    </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

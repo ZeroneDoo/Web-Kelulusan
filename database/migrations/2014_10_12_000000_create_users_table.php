@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nisn')->unique();
-            $table->string('nipd')->unique();
+            $table->string('nipd');
             $table->string('nama_siswa');
             $table->enum('jenis_kelamin', ["L", "P"]);
             // $table->foreignId('kelas_id')->onDelete('cascade');

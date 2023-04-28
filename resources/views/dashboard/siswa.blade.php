@@ -88,7 +88,7 @@
                         <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->tanggal_lahir }}</p>
                       </td>
                       <td>
-                        {{-- <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->jurusan->jurusan }}</p> --}}
+                        <p class="p-3 mb-0 " style="font-size:12px;">{{ $siswa->jurusan->jurusan }}</p>
                       </td>
                     
                       <td class="align-middle">

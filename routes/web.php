@@ -41,6 +41,7 @@ Route::controller(KurikulumController::class)->group(function(){
     Route::post('/', 'importExcelUser')->name('importExcel'); // import data user
     Route::post('/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
     Route::post('/kelas', 'importExcelKelas')->name('importExcelKelas'); // import data kelas
+    Route::post('/mapel', 'importExcelMapel')->name('importExcelMapel'); // import data kelas
 
     // edit
     Route::get('/mapel/{id}', 'editMapel')->name('edit.mapel');

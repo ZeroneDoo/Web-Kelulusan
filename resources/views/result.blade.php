@@ -131,7 +131,7 @@
                 </div>
                 <div class="kompetensi">
                     <p>Kompetensi</p>
-                    <p>{{ $jurusan->jurusan->jurusan }}</p>
+                    <p>{{ $user->jurusan->jurusan }}</p>
                 </div>
             </div>
         </div>

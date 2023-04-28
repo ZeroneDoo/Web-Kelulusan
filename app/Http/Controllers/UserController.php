@@ -33,10 +33,9 @@ class UserController extends Controller
 
     public function viewMain()
     {
-        $user = User::with(['kelas'])->find(auth()->user()->id);
-        $getJurusan = Kelas::with(['jurusan'])->find($user->kelas->id);
+        $user = User::with(['jurusan'])->find(auth()->user()->id);
         return view('result', [
-            'jurusan' => $getJurusan
+            'user' => $user
         ]);
     }
 
