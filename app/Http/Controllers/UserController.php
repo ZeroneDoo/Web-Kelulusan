@@ -48,7 +48,7 @@ class UserController extends Controller
     public function generatePdf()
     {
         // emang merah kyk gini
-        $pdf = Pdf::loadView('page.testing', ['data' => 1]);
+        $pdf = Pdf::loadView('dashboard.exportTemplate', ['data' => 1]);
         $pdf->save('Surat Kelulusan.pdf');
         return $pdf->stream('Surat Kelulusan.pdf');
     }
