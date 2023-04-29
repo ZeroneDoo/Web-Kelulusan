@@ -21,7 +21,8 @@
                 <div class="modal fade z-index 1050" id="modals" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="1050" aria-labelledby="modalsLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <form action="">
+                        <form action="{{ route('importExcelNilai') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="modalsLabel">Impor Data </h1>
@@ -38,7 +39,7 @@
                                         </div>
                                         <span class="header">Tekan & Lepaskan</span>
                                         <span class="header">atau <span class="button">Cari</span></span>
-                                        <input type="file" id="file-input" multiple hidden>
+                                        <input type="file" id="file-input" name="file" multiple hidden>
 
                                     </div>
                                 </div>
@@ -61,43 +62,41 @@
                     <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">NISN</th>
                     <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama</th>
                     <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Kelas</th>
-                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Rata Rata UKK</th>
-                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Rata Rata US</th>
+                    <th class=" text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Rata Rata</th>
                     <th class="text-secondary opacity-7"></th>
                   </tr>
                 </thead>
                 <tbody>
-                <tr class="">
-                  <td>
-                    <h6 class="p-3 mb-0 text-sm ">0612345</h6>
-                  </td>
-                  <td>
-                    <h6 class="p-3 mb-0 text-sm">Sheyla Aulya</h6>
-                  </td>
-                  <td>
-                    <h6 class="p-3 mb-0 text-sm">XI PPLG 2</h6>
-                  </td>
-                  <td>
-                    <h6 class="p-3 mb-0 text-sm">90.00</h6>
-                  </td>
-                  <td>
-                    <h6 class="p-3 mb-0 text-sm">100.00</h6>
-                  </td>
-                 
-                  <td class="align-middle">
-                    <div class="d-flex justify-content-center p-3 gap-3">
-                        <a href="" class="text-secondary font-weight-bold text-sm text-decoration-none"
-                            data-toggle="tooltip" data-original-title="Edit user">
-                            Edit
-                        </a>
-                        <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
-                            data-toggle="tooltip" data-original-title="Edit user">
-                            Hapus
-                        </a>
-                    </div>
+                @foreach ($nilais as $nilai)
+                  <tr class="">
+                    <td>
+                      <h6 class="p-3 mb-0 text-sm ">{{ $nilai->user->nisn }}</h6>
+                    </td>
+                    <td>
+                      <h6 class="p-3 mb-0 text-sm">{{ $nilai->user->nama_siswa }}</h6>
+                    </td>
+                    <td>
+                      <h6 class="p-3 mb-0 text-sm">{{ App\Models\Jurusan::find($nilai->user->jurusan_id)->jurusan }}</h6>
+                    </td>
+                    <td>
+                      <h6 class="p-3 mb-0 text-sm">{{ intval(($nilai->pai + $nilai->pkn + $nilai->bindo + $nilai->mtk + $nilai->sindo + $nilai->bing + $nilai->senbud + $nilai->pjok + $nilai->basun + $nilai->simdig + $nilai->f_ts + $nilai->k_ddk + $nilai->dpk + $nilai->kk) / 14)  }}</h6>
+                    </td>
+                  
+                    <td class="align-middle">
+                      <div class="d-flex justify-content-center p-3 gap-3">
+                          <a href="" class="text-secondary font-weight-bold text-sm text-decoration-none"
+                              data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                          </a>
+                          <a href="javascript:;" class="text-danger font-weight-bold text-sm text-decoration-none"
+                              data-toggle="tooltip" data-original-title="Edit user">
+                              Hapus
+                          </a>
+                      </div>
 
-                </td>
-                </tr>
+                    </td>
+                  </tr>
+                @endforeach
                
              
                 </tbody>

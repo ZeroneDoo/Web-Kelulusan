@@ -24,12 +24,12 @@
                 <tr>
                     <td style="width:250px; font-size: 14px">Nama</td>
                     <td style="width:50px; font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->nama_siswa }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Tempat Tanggal Lahir</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->tempat_lahir}}, {{  $siswa->tanggal_lahir  }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Nama Orang Tua</td>
@@ -39,17 +39,17 @@
                 <tr>
                     <td style="font-size: 14px">Nomor Induk Siswa</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->nipd }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Nomor Induk Siswa Nasional</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->nisn }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Peminatan / Kompetensi Keahlian</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->jurusan->jurusan }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Dinyatakan</td>

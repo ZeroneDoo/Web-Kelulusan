@@ -24,8 +24,8 @@ class User extends Authenticatable
         return $this->belongsTo(Jurusan::class);
     }
 
-    public function matpels()
+    public function matpel()
     {
-        return $this->belongsToMany(Matpel::class, UserMatpel::class);
+        return $this->hasMany(Matpel::class);
     }
 }
