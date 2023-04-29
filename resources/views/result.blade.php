@@ -42,56 +42,13 @@
                         <th>Mata Pelajaran</th>
                         <th>Nilai</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendidikan Agama Islam</td>
-                        <td>90</td>
-                    </tr>
+                    @for ($i = 0; $i < count($nilais['mapel']); $i++)
+                        <tr>
+                            <td>{{ $i+1 }}.</td>
+                            <td>{{ $nilais['mapel'][$i] }}</td>
+                            <td>{{ $nilais['nilai'][$i] }}</td>
+                        </tr>
+                    @endfor
                 </table>
             </div>
         </div>
@@ -138,12 +95,21 @@
         
         <div class="buttons">
            
-            <a href="/generatepdf">
-                <button >
-                    <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
-                    <p>Unduh Surat Kelulusan</p>
-                </button>
-            </a>
+            @if (auth()->user()->ukk == 0 && auth()->user()->us == 0 && auth()->user()->laporan == 0)
+                <a href="/generatepdf">
+                    <button >
+                        <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
+                        <p>Unduh Surat Kelulusan</p>
+                    </button>
+                </a>
+            @else
+                <a href="/">
+                    <button >
+                        <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>
+                        <p>Unduh Surat Kelulusan</p>
+                    </button>
+                </a>
+            @endif
 
             <a href="">
                 <form action="{{ route('logout') }}" method="post">

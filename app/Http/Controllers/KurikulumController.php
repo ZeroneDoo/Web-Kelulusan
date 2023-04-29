@@ -174,22 +174,22 @@ class KurikulumController extends Controller
     public function putInputNilai(Request $request,$id)
     {
         $data = Matpel::find($id);
-        // $data->update([
-        //     'pai'=> $request->pai,
-        //     'pkn'=> $request->pkn,
-        //     'bindo'=> $request->bindo,
-        //     'mtk'=> $request->,
-        //     'sindo'=> $request->,
-        //     'bing'=> $request->,
-        //     'senbud'=> $request->,
-        //     'pjok'=> $request->,
-        //     'basun'=> $request->,
-        //     'simdig'=> $request->,
-        //     'f_ts'=> $request->,
-        //     'k_ddk'=> $request->,
-        //     'dpk'=> $request->,
-        //     'kk'=> $request->,
-        // ]);
+        $data->update([
+            'pai'=> $request->pai,
+            'pkn'=> $request->pkn,
+            'bindo'=> $request->bindo,
+            'mtk'=> $request->mtk,
+            'sindo'=> $request->sindo,
+            'bing'=> $request->bing,
+            'senbud'=> $request->senbud,
+            'pjok'=> $request->pjok,
+            'basun'=> $request->basun,
+            'simdig'=> $request->simdig,
+            'f_ts'=> $request->f_ts,
+            'k_ddk'=> $request->k_ddk,
+            'dpk'=> $request->dpk,
+            'kk'=> $request->kk,
+        ]);
         return view('dashboard/editinputNilai');
     }
 
