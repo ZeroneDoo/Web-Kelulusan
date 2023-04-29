@@ -83,8 +83,12 @@ class UserController extends Controller
 
     public function generatePdf()
     {
-        $data = User::with(['jurusan'])->find(auth()->user()->id);        
-        $pdf = Pdf::loadView('dashboard.exportTemplate', ['siswa' => $data]);
+        $data = User::with(['jurusan'])->find(auth()->user()->id);
+        $nilai = auth()->user()->matpel;
+
+        $avg = ($nilai->pai + $nilai->pkn + $nilai->bindo + $nilai->mtk + $nilai->sindo + $nilai->bing + $nilai->senbud + $nilai->pjok + $nilai->basun + $nilai->simdig + $nilai->f_ts + $nilai->k_ddk + $nilai->dpk + $nilai->kk) / 14;
+        
+        $pdf = Pdf::loadView('dashboard.exportTemplate', ['siswa' => $data, 'nilai' => $nilai, 'avg' => round($avg)]);
         // $pdf->save('Surat Kelulusan.pdf');
         $pdf->setPaper('A4', 'potrait');
         $pdf->render();
