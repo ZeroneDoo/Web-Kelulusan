@@ -132,7 +132,7 @@ table th:nth-child(3) {
     justify-content: space-between;
     padding: 20px 30px;
     width: 20vw;
-    height: 60vh;
+    height: fit-content;
     background-color: white;
     border-radius: 20px;
 }
@@ -179,4 +179,84 @@ table th:nth-child(3) {
     margin-top: -10px;
     line-height: 5px;
     font-size: 14px;
+}
+
+@media screen and (max-width: 720px){
+    #result{
+        overflow-y: scroll;
+    }
+
+    #resultcontent{
+      
+    }
+
+    .announce p:first-child {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 105vw;
+        
+    }
+    .rights-top {
+        width: 100vw;
+        background-color: white;
+        border-radius: 20px;
+        margin-left: 30px;
+    }
+
+    .scores {
+       position: absolute;
+      top: 90vh;
+      width: 105vw;
+        margin-left: 30px;
+    }
+    table th:nth-child(2) {
+        width: 70vw;
+    }
+    
+    
+    .note{
+        width: 120vw;
+        position: absolute;
+        top: 147vh;
+        margin-left: 30px;
+    }
+
+    .note h5{
+        font-size: 16px;
+    }
+    
+    .buttons{
+        position: absolute;
+        top: 170vh;
+        margin-left: 30px;
+    }
+
+    .buttons button {
+       
+        padding: 0px 110px;
+       width: 115vw;
+    }
+    
+    .buttons .logout{
+        font-size: 14px;
+        padding: 0px 180px;
+        background-color: #E74646;
+        color: white;
+    }
+    
+    #sosmeds{
+        position: absolute;
+        top: 200vh;
+    }
+
+    .content{
+        height: 180vh;
+    }
+
+    .container{
+        height: 200vh;
+    }
+   
+
 }

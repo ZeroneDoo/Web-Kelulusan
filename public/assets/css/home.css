@@ -224,7 +224,7 @@ ul li {
     border: transparent;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
     /* body {
         overflow-y: hidden;
         overflow-x: hidden; */
@@ -308,7 +308,7 @@ ul li {
     }
 
     .content .leftafter {
-        width: 100%;
+        width: 105%;
         position: relative;
         top: 75vh;
     }
