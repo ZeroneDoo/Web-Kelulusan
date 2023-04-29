@@ -85,8 +85,9 @@ class UserController extends Controller
     {
         $data = User::with(['jurusan'])->find(auth()->user()->id);        
         $pdf = Pdf::loadView('dashboard.exportTemplate', ['siswa' => $data]);
-        $pdf->save('Surat Kelulusan.pdf');
+        // $pdf->save('Surat Kelulusan.pdf');
         $pdf->setPaper('A4', 'potrait');
+        $pdf->render();
         return $pdf->stream('Surat Kelulusan.pdf');
 
         // $dompdf = new Dompdf();
