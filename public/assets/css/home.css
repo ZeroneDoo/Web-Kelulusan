@@ -1,13 +1,15 @@
-body{
+body {
     overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 .container {
     width: 96%;
     height: 100%;
@@ -16,14 +18,13 @@ a{
     padding: 30px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: center;
     gap: 50vw;
-    
 }
 
-.logo{
+.logo {
     gap: 10px;
     width: 20vw;
     height: 8vh;
@@ -35,51 +36,60 @@ a{
     font-weight: 900;
     color: #0A2647;
 }
-.logo p{
+
+.logo p {
     font-size: 16px;
 }
-.logo p span{
+
+.logo p span {
     color: #FF9900;
 }
-.header img{
+
+.header img {
     width: 40px;
 }
-ul{
+
+ul {
     display: flex;
     gap: 40px;
 }
-ul li{
+
+ul li {
     list-style: none;
     display: flex;
 }
-.sosmed a{
+
+.sosmed a {
     color: white;
     opacity: 0.8;
     font-size: 40px
 }
-.content{
-      padding: 0px 30px 30px 30px;
-      display: flex;
-      gap: 2vw;
+
+.content {
+    padding: 0px 30px 30px 30px;
+    display: flex;
+    gap: 2vw;
 }
+
 .content .left {
     width: 60%;
     line-height: 5px;
 }
-.content .left  .top p:first-child{
+
+.content .left .top p:first-child {
     font-size: 100px;
     color: white;
     font-weight: 900;
-
 }
-.content .left  .top p:last-child{
+
+.content .left .top p:last-child {
     font-size: 60px;
     color: white;
     font-weight: 900;
     word-spacing: 10px;
-
 }
-.content .left  .top p:last-child span{
+
+.content .left .top p:last-child span {
     color: #FF9900;
 }
 
@@ -87,29 +97,34 @@ ul li{
     width: 60%;
     line-height: 5px;
 }
-.content .leftafter,  .top p:first-child{
+
+.content .leftafter,
+.top p:first-child {
     font-size: 100px;
     color: white;
     font-weight: 900;
 
 }
-.content .leftafter,  .top p:last-child{
+
+.content .leftafter,
+.top p:last-child {
     font-size: 60px;
     color: white;
     font-weight: 900;
     word-spacing: 10px;
-
 }
-.content .leftafter,  .top p:last-child span{
+
+.content .leftafter,
+.top p:last-child span {
     color: #FF9900;
 }
 
-.leftafter{
+.leftafter {
     display: none;
     margin-top: 30px;
 }
 
-.back1{
+.back1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,8 +135,8 @@ ul li{
 
 }
 
-.back2{
-     width: 35vw;
+.back2 {
+    width: 35vw;
     height: 35vw;
     border-radius: 50%;
     background-color: #124f8c94;
@@ -130,7 +145,7 @@ ul li{
     justify-content: center;
 }
 
-.back2 img{
+.back2 img {
     margin-top: -5vh;
     width: 40vw;
 }
@@ -140,7 +155,9 @@ ul li{
     gap: 20px;
 }
 
-.hari, .jam, .menit{
+.hari,
+.jam,
+.menit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,22 +169,25 @@ ul li{
     border-radius: 20px;
 }
 
-.time p:last-child{
+.time p:last-child {
     font-size: 76px;
     color: white;
     font-weight: 900;
     word-spacing: 10px;
 }
-.time p:first-child{
+
+.time p:first-child {
     font-size: 20px;
     color: white;
-    font-weight:700;
+    font-weight: 700;
     word-spacing: 10px;
 }
-.bottom{
+
+.bottom {
     padding-left: 5px;
 }
-.bottom p{
+
+.bottom p {
     word-spacing: 3px;
     color: white;
     font-size: 20px;
@@ -177,7 +197,7 @@ ul li{
 }
 
 
-.search{
+.search {
     padding: 12px 20px;
     width: 35vw;
     border-radius: 15px;
@@ -185,18 +205,130 @@ ul li{
 }
 
 
-.search-wrapper input{
+.search-wrapper input {
     margin-right: -15px;
     border: 0.5px solid rgba(0, 0, 0, 0.418);
     font-weight: 700;
 }
-.search-wrapper button{
+
+.search-wrapper button {
     padding: 10px;
     width: 120px;
     border-radius: 20px;
     font-size: 18px;
     background-color: #FF9900;
     font-weight: 800;
-    color: white; 
+    color: white;
     border: transparent;
+}
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .header {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .container {
+        width: 160vw;
+        height: 180vh;
+        background: rgb(10, 38, 71);
+        background: linear-gradient(180deg, rgba(10, 38, 71, 1) 0%, rgba(18, 78, 140, 0.9) 100%);
+        padding: 30px;
+    }
+
+    .logo {
+        gap: 15px;
+        width: 100vw;
+        height: 10vh;
+        position: relative;
+        margin: auto;
+    }
+
+    .logo p {
+        font-size: 25px;
+    }
+
+    .sosmed {
+
+        width: 137vw;
+        position: absolute;
+        top: 165vh;
+        background-color: #0A2647;
+        left: 0px;
+        padding-left: 150px;
+    }
+
+    .content .left {
+        position: relative;
+        top: 75vh;
+        width: 100%;
+    }
+
+    .content {
+        display: block;
+
+    }
+
+    .content .left .top p:first-child {
+        font-size: 70px;
+    }
+
+    .content .left .top p:last-child {
+        font-size: 54px;
+        color: white;
+        font-weight: 900;
+        word-spacing: 10px;
+    }
+
+    .right {
+        position: absolute;
+        left: 20vw;
+        top: 25vh;
+    }
+
+    .back1 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .back2 {
+        width: 430px;
+        height: 430px;
+    }
+
+    .back2 img {
+        width: 430px;
+    }
+
+    .content .leftafter {
+        width: 100%;
+        position: relative;
+        top: 75vh;
+    }
+
+    .content .leftafter,
+    .top p:first-child {
+        font-size: 90px;
+        margin-top: 0px;
+    }
+
+    .bottom{
+        margin-top: 80px;
+    }
+    .search {
+        padding: 20px;
+        width: 110vw;
+        border-radius: 30px;
+        font-size: 18px;
+    }
+
+    .search-wrapper button {
+        padding: 15px;
+        border-radius: 25px;
+    }
 }

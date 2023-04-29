@@ -45,5 +45,6 @@ class UserController extends Controller
         $pdf = Pdf::loadView('dashboard.exportTemplate', ['data' => 1]);
         $pdf->save('Surat Kelulusan.pdf');
         return $pdf->stream('Surat Kelulusan.pdf');
+        
     }
 }
