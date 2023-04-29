@@ -86,10 +86,10 @@
                     <p>Tanggal Lahir</p>
                     <p>{{ auth()->user()->tanggal_lahir }}</p>
                 </div>
-                {{-- <div class="kompetensi">
+                <div class="kompetensi">
                     <p>Kompetensi</p>
                     <p>{{ $user->jurusan->jurusan }}</p>
-                </div> --}}
+                </div>
             </div>
         </div>
         

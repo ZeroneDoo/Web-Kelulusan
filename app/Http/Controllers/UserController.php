@@ -88,9 +88,6 @@ class UserController extends Controller
         $pdf->save('Surat Kelulusan.pdf');
         $pdf->setPaper('A4', 'potrait');
         return $pdf->stream('Surat Kelulusan.pdf');
-<<<<<<< HEAD
-        
-=======
 
         // $dompdf = new Dompdf();
         // $dompdf->loadHtml('dashboard.exportTemplate');
@@ -100,6 +97,5 @@ class UserController extends Controller
         // $dompdf->render();
 
         // return $dompdf->stream();
->>>>>>> 4a46a817504c173eea83fc19afaba77dcd58d74d
     }
 }
