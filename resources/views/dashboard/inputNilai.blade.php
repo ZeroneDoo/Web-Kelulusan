@@ -55,7 +55,7 @@
 
           
           <div class="card-body px-0 pt-0 pb-2">
-            <div class="table-responsive p-0">
+            <div class="table-responsive p-0" style="max-height: 460px; overflow-y: scroll;">
               <table class="table align-items-center justify-center mb-0">
                 <thead>
                   <tr class="">
