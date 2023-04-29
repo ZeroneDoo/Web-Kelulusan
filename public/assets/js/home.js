@@ -1,4 +1,4 @@
-var countDownDate = new Date('April 30, 2023 20:31:00').getTime();
+var countDownDate = new Date('April 29, 2023 20:31:00').getTime();
         var x = setInterval(
             function () {
                 var now = new Date().getTime();
@@ -14,7 +14,7 @@ var countDownDate = new Date('April 30, 2023 20:31:00').getTime();
                 let minute = document.getElementById('minutes').innerHTML = minutes;
                 let seccond = document.getElementById('seconds').innerHTML = seconds;
 
-                if (seconds <= "00") {
+                if (seconds <= "00" && minutes <= "00" && hours <= "00" && days <= "00") {
                       clearInterval(x);
                     document.getElementById("left-count").style.display = "none";
                     document.getElementById("left").style.display = "block";
