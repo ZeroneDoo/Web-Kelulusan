@@ -15,7 +15,21 @@ return new class extends Migration
     {
         Schema::create('matpels', function (Blueprint $table) {
             $table->id();
-            $table->string("mata_pelajaran");
+            $table->foreignId('user_id');
+            $table->integer("pai");
+            $table->integer("pkn");
+            $table->integer("bindo");
+            $table->integer("mtk");
+            $table->integer("sindo");
+            $table->integer("bing");
+            $table->integer("senbud");
+            $table->integer("pjok");
+            $table->integer("basun");
+            $table->integer("simdig");
+            $table->integer("f_ts");
+            $table->integer("k_ddk");
+            $table->integer("dpk");
+            $table->integer("kk");
             $table->string("jurusan")->default("all");
             $table->integer("kkm")->nullable();
             $table->timestamps();

@@ -11,8 +11,8 @@ class Matpel extends Model
 
     protected $guarded = ['id'];
     
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class, UserMatpel::class);
+        return $this->belongsTo(User::class);
     }
 }

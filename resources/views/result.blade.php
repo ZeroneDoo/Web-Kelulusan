@@ -146,10 +146,13 @@
             </a>
 
             <a href="">
-                <button class="logout">
-                    <iconify-icon icon="solar:logout-2-bold" style="color: white; font-size:25px;"></iconify-icon>
-                    <p>Keluar</p>
-                </button>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button class="logout">
+                        <iconify-icon icon="solar:logout-2-bold" style="color: white; font-size:25px;"></iconify-icon>
+                        <p>Keluar</p>
+                    </button>
+                </form>
             </a>
            
         </div>

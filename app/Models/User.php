@@ -26,6 +26,6 @@ class User extends Authenticatable
 
     public function matpels()
     {
-        return $this->belongsToMany(Matpel::class, UserMatpel::class);
+        return $this->belongsTo(Matpel::class);
     }
 }
