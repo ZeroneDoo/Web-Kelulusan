@@ -67,3 +67,7 @@ Route::controller(KurikulumController::class)->group(function(){
     Route::get('/delkelas/{id}', 'deleteKelas')->name('delete.kelas');
     Route::get('/delinputnilai/{id}', 'deleteInputNilai')->name('delete.inputNilai');
 });
+
+Route::get('/test', function(){
+    return view("dashboard/exportTemplate");
+});
