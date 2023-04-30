@@ -26,6 +26,6 @@ class User extends Authenticatable
 
     public function matpel()
     {
-        return $this->hasMany(Matpel::class);
+        return $this->hasOne(Matpel::class);
     }
 }

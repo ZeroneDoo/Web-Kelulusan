@@ -75,32 +75,32 @@
                 <tr>
                     <td style="text-align: center; font-size: 11px"> 1.</td>
                     <td style="padding-left: 10px; font-size: 11px"> Pendidikan Agama dan Budi Pekerti</td>
-                    <td style="text-align: center;font-size: 11px">90</td>
+                    <td style="text-align: center;font-size: 11px">{{ $nilai->pai }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center;font-size: 11px"> 2.</td>
                     <td style="padding-left: 10px;font-size: 11px"> Pendidikan Pancasila dan Kewarganegaraan</td>
-                    <td style="text-align: center;font-size: 11px">90</td>
+                    <td style="text-align: center;font-size: 11px">{{ $nilai->pkn }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 3.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Bahasa Indonesia</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->bindo }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 4.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Matematika</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->mtk }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 5.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Sejarah Indonesia</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->sindo }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 6.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Bahasa Inggris</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->bing }}</td>
                 </tr>
 
                 <!-- Muatan Kewilayahan -->
@@ -111,17 +111,17 @@
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 1.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Seni Budaya</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->senbud }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 2.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Pendidikan Jasmani,Olahraga dan Kesehatan</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->pjok }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 3.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Bahasa Sunda</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->basun }}</td>
                 </tr>
                
                 
@@ -133,32 +133,34 @@
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 1.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Simulasi dan Komunikasi Digital</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->simdig }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 2.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Fisika / Tata Artistik</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->f_ts }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 3.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Kimia / Dasar-dasar Kreativitas 	</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->k_ddk }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 4.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Dasar Program Keahlian</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->dpk }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 5.</td>
                     <td style="padding-left: 10px; font-size:11px;"> Kompetensi Keahlian</td>
-                    <td style="text-align: center; font-size:11px;">90</td>
+                    <td style="text-align: center; font-size:11px;">{{ $nilai->kk }}</td>
                 </tr>
 
                 <tr>
                     <td colspan="2" style="text-align: center; font-size:11px;"><b>Rata Rata</b></td>
-                    <td></td>
+                    <td style="text-align: center; font-size:14px;">
+                        {{ $avg }}
+                    </td>
                 </tr>
             </table>
             <div class="footer" style="margin-left: 350px;">
@@ -168,7 +170,6 @@
                 <p style="font-size: 14px"><b><u>Nursidik, ST</u></b></p>
                 {{-- <p style="font-size: 14px">NIP 19790911200411201</p> --}}
             </div>
-         
         </div>  
 
     </div>
