@@ -30,6 +30,7 @@ class UsersImport implements ToModel, WithHeadingRow
 
             return new User([
                 'nama_siswa' => $row['nama_peserta_didik'],
+                'nama_wali' => $row['wali_murid'],
                 'nisn' => $row['n_i_s_n'],
                 'nipd' => $row['n_i_p_d'],
                 'jenis_kelamin' => $row['l_p'],

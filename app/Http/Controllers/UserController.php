@@ -35,6 +35,7 @@ class UserController extends Controller
     public function viewMain()
     {
         $user = User::with(['jurusan', 'matpel'])->find(auth()->user()->id);
+        // dd($user->matpel->pai);
         $nilai = [
             'mapel' => [
                 'Pendidikan Agama dan Budi Pekerti',
@@ -47,26 +48,26 @@ class UserController extends Controller
                 'Pendidikan Jasmani Olahraga dan Kebugaran',
                 'Bahasa Sunda',
                 'Simulasi Digital',
-                'Fisika / Tinjauan Seni',
-                'Kimia / Dasar-Dasar Kreativitas',
+                ($user->jurusan_id == 5) ?'Tinjauan Seni': 'Fisika',
+                ($user->jurusan_id == 5) ?'Dasar-Dasar Kreativitas': 'Kimia',
                 'Dasar Program Keahlian',
                 'Kompetensi Keahlian',
             ],
             'nilai' => [
-                $user->matpel[0]->pai,
-                $user->matpel[0]->pkn,
-                $user->matpel[0]->bindo,
-                $user->matpel[0]->mtk,
-                $user->matpel[0]->sindo,
-                $user->matpel[0]->bing,
-                $user->matpel[0]->senbud,
-                $user->matpel[0]->pjok,
-                $user->matpel[0]->basun,
-                $user->matpel[0]->simdig,
-                $user->matpel[0]->f_ts,
-                $user->matpel[0]->k_ddk,
-                $user->matpel[0]->dpk,
-                $user->matpel[0]->kk,
+                $user->matpel->pai,
+                $user->matpel->pkn,
+                $user->matpel->bindo,
+                $user->matpel->mtk,
+                $user->matpel->sindo,
+                $user->matpel->bing,
+                $user->matpel->senbud,
+                $user->matpel->pjok,
+                $user->matpel->basun,
+                $user->matpel->simdig,
+                $user->matpel->f_ts,
+                $user->matpel->k_ddk,
+                $user->matpel->dpk,
+                $user->matpel->kk,
             ]
         ]; 
         return view('result', [
@@ -93,14 +94,5 @@ class UserController extends Controller
         $pdf->setPaper('A4', 'potrait');
         $pdf->render();
         return $pdf->stream('Surat Kelulusan.pdf');
-
-        // $dompdf = new Dompdf();
-        // $dompdf->loadHtml('dashboard.exportTemplate');
-
-        // $dompdf->setPaper('A4', 'potrait');
-
-        // $dompdf->render();
-
-        // return $dompdf->stream();
     }
 }

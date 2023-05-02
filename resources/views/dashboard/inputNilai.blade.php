@@ -79,7 +79,7 @@
                       <h6 class="p-3 mb-0 text-sm">{{ App\Models\Jurusan::find($nilai->user->jurusan_id)->jurusan }}</h6>
                     </td>
                     <td>
-                      <h6 class="p-3 mb-0 text-sm">{{ intval(($nilai->pai + $nilai->pkn + $nilai->bindo + $nilai->mtk + $nilai->sindo + $nilai->bing + $nilai->senbud + $nilai->pjok + $nilai->basun + $nilai->simdig + $nilai->f_ts + $nilai->k_ddk + $nilai->dpk + $nilai->kk) / 14)  }}</h6>
+                      <h6 class="p-3 mb-0 text-sm">{{ round(($nilai->pai + $nilai->pkn + $nilai->bindo + $nilai->mtk + $nilai->sindo + $nilai->bing + $nilai->senbud + $nilai->pjok + $nilai->basun + $nilai->simdig + $nilai->f_ts + $nilai->k_ddk + $nilai->dpk + $nilai->kk) / 14)  }}</h6>
                     </td>
                   
                     <td class="align-middle">

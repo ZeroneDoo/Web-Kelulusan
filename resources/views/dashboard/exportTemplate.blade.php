@@ -35,7 +35,7 @@
                 <tr>
                     <td style="font-size: 14px">Nama Orang Tua</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">Nama</td>
+                    <td style="font-size: 14px">{{ $siswa->nama_wali }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Nomor Induk Siswa</td>
@@ -45,7 +45,7 @@
                 <tr>
                     <td style="font-size: 14px">Nomor Induk Siswa Nasional</td>
                     <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->nisn }}</td>
+                    <td style="font-size: 14px">00{{ $siswa->nisn }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px">Peminatan / Kompetensi Keahlian</td>
@@ -137,12 +137,12 @@
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 2.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Fisika / Tata Artistik</td>
+                    <td style="padding-left: 10px; font-size:11px;"> {{ ($siswa->jurusan_id == 5) ? 'Tinjauan Seni' : 'Fisika' }}</td>
                     <td style="text-align: center; font-size:11px;">{{ $nilai->f_ts }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 3.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Kimia / Dasar-dasar Kreativitas 	</td>
+                    <td style="padding-left: 10px; font-size:11px;">{{ ($siswa->jurusan_id == 5) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
                     <td style="text-align: center; font-size:11px;">{{ $nilai->k_ddk }}</td>
                 </tr>
                 <tr>
@@ -159,7 +159,7 @@
                 <tr>
                     <td colspan="2" style="text-align: center; font-size:11px;"><b>Rata Rata</b></td>
                     <td style="text-align: center; font-size:14px;">
-                        {{ $avg }}
+                        <b>{{ $avg }}</b>
                     </td>
                 </tr>
             </table>
