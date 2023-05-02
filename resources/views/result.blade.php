@@ -97,7 +97,7 @@
             
             <div class="buttons">
                
-                @if (auth()->user()->ukk == 1 && auth()->user()->us == 1 && auth()->user()->laporan == 1)
+                @if (auth()->user()->pkl == 1 && auth()->user()->kurikulum == 1 && auth()->user()->ukk == 1)
                     <a href="/generatepdf">
                         <button >
                             <iconify-icon style="font-size: 25px" icon="material-symbols:download-rounded"></iconify-icon>

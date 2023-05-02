@@ -19,7 +19,6 @@ class UsersImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {   
         if($row['n_i_s_n']){
-        // dd($row);
         // SELECT 38019 AS date_5_num, DATE('1899-12-30') + INTERVAL 38019 DAY AS normal_date;
         if(gettype($row['tanggal_lahir']) == "integer"){
             $tanggal_number = $row['tanggal_lahir'];
@@ -37,6 +36,9 @@ class UsersImport implements ToModel, WithHeadingRow
                 'jurusan_id' => $row['kode_jurusan'],
                 'tempat_lahir' => $row['tempat_lahir'],
                 'tanggal_lahir' => gettype($row['tanggal_lahir']) == "integer" ? $tanggal : $row['tanggal_lahir'],
+                'pkl' => $row['adm_pkl'] == 'Lengkap' ? true : false,
+                'kurikulum'=> $row['adm_kurikulum'] == 'Lengkap' ? true : false,
+                'ukk' => $row['adm_ukk'] == 'Lengkap' ? true : false,
             ]);
         }
     }

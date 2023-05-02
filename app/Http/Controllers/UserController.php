@@ -30,6 +30,8 @@ class UserController extends Controller
             Auth::login($findUser);
             return redirect()->route('main');
         }
+
+        return back();
     }
 
     public function viewMain()
@@ -41,15 +43,15 @@ class UserController extends Controller
                 'Pendidikan Agama dan Budi Pekerti',
                 'Pendidikan Kewarganegaraan',
                 'Bahasa Indonesia',
-                'Matemtika',
+                'Matematika',
                 'Sejarah Indonesia',
                 'Bahasa Inggris',
                 'Seni Budaya',
                 'Pendidikan Jasmani Olahraga dan Kebugaran',
                 'Bahasa Sunda',
                 'Simulasi Digital',
-                ($user->jurusan_id == 5) ?'Tinjauan Seni': 'Fisika',
-                ($user->jurusan_id == 5) ?'Dasar-Dasar Kreativitas': 'Kimia',
+                ($user->jurusan_id == 4) ?'Tinjauan Seni': 'Fisika',
+                ($user->jurusan_id == 4) ?'Dasar-Dasar Kreativitas': 'Kimia',
                 'Dasar Program Keahlian',
                 'Kompetensi Keahlian',
             ],
