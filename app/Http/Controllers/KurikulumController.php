@@ -8,7 +8,9 @@ use App\Imports\NilaiImport;
 use App\Imports\UsersImport;
 use App\Models\Jurusan;
 use App\Models\Matpel;
+use App\Models\TimeWatch;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
@@ -39,6 +41,25 @@ class KurikulumController extends Controller
             return redirect()->route('view.siswa');
         }
 
+        return back();
+    }
+
+    public function viewCountdown()
+    {
+        return view('dashboard.countdown');
+    }
+    public function postCountdown(Request $request)
+    {
+        $request->validate([
+            'time' => 'required'
+        ]);
+        // dd($request->time);
+        $str = Carbon::parse($request->time);
+
+        $str = $str->format('M d, Y H:i:s');
+        TimeWatch::find(1)->update([
+            'time' => $str,
+        ]);
         return back();
     }
 

@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'nisn' => "admin_TB",
-            'nipd' => 'admin_TB',
+            'nipd' => '123456',
             'nama_siswa' => 'Admin',
             'role' => 'admin',
             'jenis_kelamin' => 'L',
