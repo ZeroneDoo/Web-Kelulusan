@@ -18,6 +18,12 @@ Generate key
   php artisan key:generate
 ```
 
+# Migrate Database
+```bash
+  php artisan migrate --seed
+  php artisan migrate:fresh --seed
+```
+
 # Collaborators
 
 - [@sheylaulya](https://www.github.com/sheylaulya)

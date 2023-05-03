@@ -18,15 +18,15 @@ return new class extends Migration
             $table->string('nisn')->unique();
             $table->string('nipd');
             $table->string('nama_siswa');
-            $table->string('nama_wali');
+            $table->string('nama_wali')->nullable();
             $table->enum('jenis_kelamin', ["L", "P"]);
-            // $table->foreignId('kelas_id')->onDelete('cascade');
             $table->foreignId('jurusan_id')->onDelete('cascade');
-            $table->string('tempat_lahir');
-            $table->string('tanggal_lahir');
+            $table->string('tempat_lahir')->nullable();
+            $table->string('tanggal_lahir')->nullable();
+            $table->boolean("pkl")->default(1);
+            $table->boolean("kurikulum")->default(1);
             $table->boolean("ukk")->default(1);
-            $table->boolean("us")->default(1);
-            $table->boolean("laporan")->default(1);
+            $table->string('role')->default('user');
             $table->timestamps();
         });
     }
