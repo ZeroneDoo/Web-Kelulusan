@@ -20,6 +20,8 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 
 
+
+
     <title>Starbhak Kelulusan</title>
 </head>
 
@@ -28,7 +30,7 @@
       @yield('content')
     </div>
 
-<script src="{{ asset('assets/js/home.js') }}"></script>
+    <script src="{{ asset('assets/js/home.js') }}" defer></script>
 </body>
 
 

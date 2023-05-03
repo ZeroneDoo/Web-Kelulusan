@@ -1,6 +1,7 @@
 @extends('layout/main')
 
 @section('content')
+
 <div class="header">
     <a href="">
         <div class="logo">
@@ -80,4 +81,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    var watch = '{{ $watch }}';
+</script>
+
+
 @endsection

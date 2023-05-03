@@ -14,6 +14,10 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class KurikulumController extends Controller
 {
+    public function viewSigninIn()
+    {
+        return view('dashboard.signin');
+    }
     public function viewJurusan()
     {
         $data = Jurusan::all();
@@ -115,6 +119,7 @@ class KurikulumController extends Controller
     // import excel
     public function importExcelUser(Request $request)
     {
+        dd($$request->time);
         Excel::import(new UsersImport, $request->file('file'));
         return back();
     }
