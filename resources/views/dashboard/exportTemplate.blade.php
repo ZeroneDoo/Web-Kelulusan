@@ -137,12 +137,12 @@
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 2.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> {{ ($siswa->jurusan_id == 5) ? 'Tinjauan Seni' : 'Fisika' }}</td>
+                    <td style="padding-left: 10px; font-size:11px;"> {{ ($siswa->jurusan_id == 4) ? 'Tinjauan Seni' : 'Fisika' }}</td>
                     <td style="text-align: center; font-size:11px;">{{ $nilai->f_ts }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:11px;"> 3.</td>
-                    <td style="padding-left: 10px; font-size:11px;">{{ ($siswa->jurusan_id == 5) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
+                    <td style="padding-left: 10px; font-size:11px;">{{ ($siswa->jurusan_id == 4) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
                     <td style="text-align: center; font-size:11px;">{{ $nilai->k_ddk }}</td>
                 </tr>
                 <tr>
@@ -159,7 +159,7 @@
                 <tr>
                     <td colspan="2" style="text-align: center; font-size:11px;"><b>Rata Rata</b></td>
                     <td style="text-align: center; font-size:14px;">
-                        <b>{{ $avg }}</b>
+                        <b>{{ $nilai->rata_rata }}</b>
                     </td>
                 </tr>
             </table>

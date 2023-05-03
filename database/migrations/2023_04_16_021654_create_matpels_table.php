@@ -16,22 +16,22 @@ return new class extends Migration
         Schema::create('matpels', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->integer("pai");
-            $table->integer("pkn");
-            $table->integer("bindo");
-            $table->integer("mtk");
-            $table->integer("sindo");
-            $table->integer("bing");
-            $table->integer("senbud");
-            $table->integer("pjok");
-            $table->integer("basun");
-            $table->integer("simdig");
-            $table->integer("f_ts");
-            $table->integer("k_ddk");
-            $table->integer("dpk");
-            $table->integer("kk");
+            $table->string("pai");
+            $table->string("pkn");
+            $table->string("bindo");
+            $table->string("mtk");
+            $table->string("sindo");
+            $table->string("bing");
+            $table->string("senbud");
+            $table->string("pjok");
+            $table->string("basun");
+            $table->string("simdig");
+            $table->string("f_ts");
+            $table->string("k_ddk");
+            $table->string("dpk");
+            $table->string("kk");
+            $table->string("rata_rata")->nullable();
             $table->string("jurusan")->default("all");
-            $table->integer("kkm")->nullable();
             $table->timestamps();
         });
     }

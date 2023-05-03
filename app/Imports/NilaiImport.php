@@ -13,6 +13,7 @@ class NilaiImport implements ToModel, WithHeadingRow
     {
         $siswa = User::where('nama_siswa', $row['nama'])->first();
         if($siswa){
+            // dd($row);
             return new Matpel([
                 'user_id' => $siswa->id,
                 'pai'=> $row['pendidikan_agama_dan_budi_pekerti'],
@@ -29,6 +30,7 @@ class NilaiImport implements ToModel, WithHeadingRow
                 'k_ddk'=> $row['kimia_dasar_dasar_kreativitas'],
                 'dpk'=> $row['dasar_program_keahlian'],
                 'kk'=> $row['kompetensi_keahlian'],
+                'rata_rata' => $row['rata_rata']
             ]);
         }
     }
