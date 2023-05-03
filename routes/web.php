@@ -61,5 +61,5 @@ Route::controller(KurikulumController::class)->group(function(){
 });
 
 Route::get('/test', function(){
-    return view("home");
+    return view("dashboard/exportTemplate");
 });
