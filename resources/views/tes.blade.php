@@ -11,9 +11,10 @@
         Cetak PDF
     </a>
     {{-- route bisa diubah untuk sementara --}}
-    <form action="{{ route('importExcel') }}" method="post" enctype="multipart/form-data">
+    <form action="/tes" method="post" enctype="multipart/form-data">
         @csrf
-        <input type="file" name="file" id="">
+        {{-- <input type="file" name="file" id=""> --}}
+        <input type="datetime-local" name="time" id="">
         <button>Kirim</button>
     </form>
 </body>

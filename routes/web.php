@@ -2,11 +2,26 @@
 
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UserController;
+use App\Models\TimeWatch;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Route;
 
 // test input file
 Route::get('/tes', function(){
     return view("tes");
+});
+Route::post('/tes', function(Request $request){
+
+    $str = Carbon::parse($request->time);
+
+    $str = $str->format('M d, Y H:i:s');
+    // dd($str);
+    TimeWatch::find(1)->update([
+        'time' => $str,
+    ]);
+    // return view("tes");
 });
 
 Route::controller(UserController::class)->group(function(){
@@ -32,6 +47,7 @@ Route::controller(UserController::class)->group(function(){
 });
 
 Route::controller(KurikulumController::class)->group(function(){
+    Route::get('/admin/signin', 'viewSigninIn')->name('view.signin');
     Route::middleware(['auth', 'isLoginAdmin'])->group(function(){
         // get
         Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");

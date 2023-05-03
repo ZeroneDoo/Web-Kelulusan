@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelas;
+use App\Models\TimeWatch;
 use Dompdf\Dompdf;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -13,7 +14,10 @@ class UserController extends Controller
 {
     public function viewHome()
     {
-        return view('home');
+        $watch = TimeWatch::find(1)->time;
+        return view('home', [
+            'watch' => $watch
+        ]);
     }
 
     public function postHome(Request $request)
