@@ -85,91 +85,91 @@
                 <tr>
                     <td style="text-align: center; font-size: 10pt"> 1.</td>
                     <td style="padding-left: 10px; font-size: 10pt"> Pendidikan Agama dan Budi Pekerti</td>
-                    <td style="text-align: center;font-size: 10pt">{{ $nilai->pai }}</td>
+                    <td style="text-align: center;font-size: 10pt">{{ str_replace('.',',',$nilai->pai) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center;font-size: 10pt"> 2.</td>
                     <td style="padding-left: 10px;font-size: 10pt"> Pendidikan Pancasila dan Kewarganegaraan</td>
-                    <td style="text-align: center;font-size: 10pt">{{ $nilai->pkn }}</td>
+                    <td style="text-align: center;font-size: 10pt">{{ str_replace('.',',',$nilai->pkn) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 3.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Bahasa Indonesia</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->bindo }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->bindo) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 4.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Matematika</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->mtk }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->mtk) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 5.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Sejarah Indonesia</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->sindo }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->sindo) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 6.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Bahasa Inggris</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->bing }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->bing) }}</td>
                 </tr>
 
                 <!-- Muatan Kewilayahan -->
                 <tr>
-                    <td colspan="2" style="padding-left: 12px; font-size:10pt;"><b>Muatan Kewilayahan</b></td>
+                    <td colspan="2" style="padding-left: 10pt; font-size:10pt;"><b>Muatan Kewilayahan</b></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 1.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Seni Budaya</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->senbud }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->senbud) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 2.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Pendidikan Jasmani,Olahraga dan Kesehatan</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->pjok }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->pjok) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 3.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Bahasa Sunda</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->basun }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->basun) }}</td>
                 </tr>
                
                 
                 <!-- Muatan Peminatan Kejuruan -->
                 <tr>
-                    <td colspan="2" style="padding-left: 12px; font-size:10pt;"><b>Muatan Peminatan Kejuruan</b></td>
+                    <td colspan="2" style="padding-left: 10pt; font-size:10pt;"><b>Muatan Peminatan Kejuruan</b></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 1.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Simulasi dan Komunikasi Digital</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->simdig }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->simdig) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 2.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> {{ ($siswa->jurusan_id == 5) ? 'Tinjauan Seni' : 'Fisika' }}</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->f_ts }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->f_ts) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 3.</td>
                     <td style="padding-left: 10px; font-size:10pt;">{{ ($siswa->jurusan_id == 5) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->k_ddk }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->k_ddk) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 4.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Dasar Program Keahlian</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->dpk }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->dpk) }}</td>
                 </tr>
                 <tr>
                     <td style="text-align: center; font-size:10pt;"> 5.</td>
                     <td style="padding-left: 10px; font-size:10pt;"> Kompetensi Keahlian</td>
-                    <td style="text-align: center; font-size:10pt;">{{ $nilai->kk }}</td>
+                    <td style="text-align: center; font-size:10pt;">{{ str_replace('.',',',$nilai->kk) }}</td>
                 </tr>
 
                 <tr>
                     <td colspan="2" style="text-align: center; font-size:10pt;"><b>Rata Rata</b></td>
                     <td style="text-align: center; font-size:10pt;">
-                        <b>{{ $avg }}</b>
+                        <b>{{ str_replace('.',',',$nilai->rata_rata) }}</b>
                     </td>
                 </tr>
             </table>
@@ -177,7 +177,7 @@
                 <p style="font-size: 12pt; ">Depok, 05 Mei 2023</p>
                 <p style="font-size: 12pt; margin-top:-15px;"><b>Kepala SMK Taruna Bhakti</b></p>
                
-                <img src="assets/img/ttd-stempel.png" style="width: 130px; margin-top:-15px; margin-left:-25px;" alt="">
+                <img src="assets/img/ttd-stempel.png" style="width: 131px; margin-top:-15px; margin-left:-25px;" alt="">
                 <p style="font-size: 12pt; margin-top:-5px;"><b><u>Nursidik, ST</u></b></p>
                 {{-- <p style="font-size: 12pt">NIP 19790911200411201</p> --}}
             </div>
