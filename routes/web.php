@@ -41,13 +41,16 @@ Route::controller(UserController::class)->group(function(){
         Route::get('/generatepdf', 'generatePdf')->name('generatepdf');
 
         // logout
-        Route::post('/logout', 'logout')->name('logout');
     });
+    Route::post('/logout', 'logout')->name('logout');
 
 });
 
 Route::controller(KurikulumController::class)->group(function(){
-    Route::get('/admin/signin', 'viewSigninIn')->name('view.signin');
+    Route::middleware(['guest'])->group(function(){
+        Route::get('/admin/signin', 'viewSigninIn')->name('view.signin');
+        Route::post('/admin/signin', 'postSigninIn')->name('post.signin');
+    });
     Route::middleware(['auth', 'isLoginAdmin'])->group(function(){
         // get
         Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");

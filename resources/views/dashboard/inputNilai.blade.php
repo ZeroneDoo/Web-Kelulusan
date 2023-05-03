@@ -79,7 +79,7 @@
                       <h6 class="p-3 mb-0 text-sm">{{ App\Models\Jurusan::find($nilai->user->jurusan_id)->jurusan }}</h6>
                     </td>
                     <td>
-                      <h6 class="p-3 mb-0 text-sm">{{ $nilai->rata_rata }}</h6>
+                      <h6 class="p-3 mb-0 text-sm">{{ str_replace('.', ',',$nilai->rata_rata) }}</h6>
                     </td>
                   
                     <td class="align-middle">

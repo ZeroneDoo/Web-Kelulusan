@@ -10,6 +10,7 @@ use App\Models\Jurusan;
 use App\Models\Matpel;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class KurikulumController extends Controller
@@ -18,6 +19,29 @@ class KurikulumController extends Controller
     {
         return view('dashboard.signin');
     }
+    public function postSigninIn(Request $request)
+    {
+        $request->validate([
+            "nisn" => "required",
+            "nipd" => "required"
+        ], [
+            "nisn.required" => "*Username Tidak Boleh Kosong!!"
+        ]);
+
+        $findUser = User::where('nisn', $request->nisn)->first();
+
+        if($findUser->nipd != $request->nipd){
+            return back();
+        }
+
+        if ($findUser) {
+            Auth::login($findUser);
+            return redirect()->route('view.siswa');
+        }
+
+        return back();
+    }
+
     public function viewJurusan()
     {
         $data = Jurusan::all();
@@ -119,7 +143,6 @@ class KurikulumController extends Controller
     // import excel
     public function importExcelUser(Request $request)
     {
-        dd($$request->time);
         Excel::import(new UsersImport, $request->file('file'));
         return back();
     }

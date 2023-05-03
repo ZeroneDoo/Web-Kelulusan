@@ -9,9 +9,12 @@
             <h6 class="font-weight-bolder mb-0">@yield('titles')</h6>
         </nav>
         
-        <button type="button" class="btn btn-danger text-sm px-4 text-capitalize" style="position: absolute; top:30px; right:0px;">
-            <b>Keluar</b>
-        </button>
+        <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button type="submit" class="btn btn-danger text-sm px-4 text-capitalize" style="position: absolute; top:30px; right:0px;">
+                <b>Keluar</b>
+            </button>
+        </form>
     </div>
 
     
