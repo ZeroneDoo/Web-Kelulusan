@@ -193,10 +193,6 @@ table th:nth-child(3) {
         overflow-y: scroll;
     }
 
-    #resultcontent{
-      
-    }
-
     .announce p:first-child {
         font-size: 20px;
         margin-top: 20px;
