@@ -1,6 +1,7 @@
 @extends('layout/main')
 
 @section('content')
+<div class="container">
 
 <div class="header">
     <a href="">
@@ -80,6 +81,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </div>
 
 <script>

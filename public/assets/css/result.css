@@ -1,4 +1,11 @@
-
+#result{
+    overflow-y: scroll;
+    width: 100vw;
+    height: fit-content;
+    background: rgb(10, 38, 71);
+    background: linear-gradient(180deg, rgba(10, 38, 71, 1) 0%, rgba(18, 78, 140, 0.9) 100%);
+    padding: 30px;
+}
 
 .announce p:first-child {
     font-size: 20px;

@@ -8,6 +8,7 @@
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/result.css') }}">
 
     {{-- fonts --}}
@@ -26,11 +27,15 @@
 </head>
 
 <body>
-    <div class="container">
+  
       @yield('content')
-    </div>
+      <div class="loader">
+        <div class="justify-content-center jimu-primary-loading"></div>
+      </div>   
+
 
     <script src="{{ asset('assets/js/home.js') }}" defer></script>
+    <script src="{{ asset('assets/js/loader.js') }}" defer></script>
 </body>
 
 
