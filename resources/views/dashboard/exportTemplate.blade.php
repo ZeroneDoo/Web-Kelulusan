@@ -9,166 +9,167 @@
 <body>
     <div class="container" >
         
-    <img src="assets/img/kopSurat.png" style="height:230px;  margin-top:-50px; " alt="">
+    <img src="assets/img/kopSurat.jpg" style="height:205px;  margin-top:-50px; padding-left: 30px; " alt="">
 
-        <h4 style="text-align: center; margin-top:-2px;"><u>SURAT KETERANGAN LULUS</u></h4> 
+        <h4 style="text-align: center;"><u>SURAT KETERANGAN LULUS</u></h4> 
         <p style="text-align: center; font-size:12px; margin-top:-18px;">Nomor :  49/421.5-SMK.TB/KS/V/2023</p>
-        <div class="content" style="padding-left: 50px; padding-right: 50px;">
-            <p style="font-size: 14px">Kepala SMK Taruna Bhakti selaku Ketua Penyelenggara Ujian Sekolah Tahun Pelajaran 2022/2023 berdasarkan : </p>
+        <div class="content" style="padding-left: 70px; padding-right: 50px;">
+            <p style="font-size: 12px">Kepala SMK Taruna Bhakti selaku Ketua Penyelenggara Ujian Sekolah Tahun Pelajaran 2022/2023 berdasarkan : </p>
             <ol>
-                <li style="font-size: 14px">Ketuntasan dari seluruh program pembelajaran pada kurikulum 2013;</li>
-                <li style="font-size: 14px">Kriteria kelulusan dari satuan pendidikan sesuai dengan peraturan perundang-undangan ;</li>
-                <li style="font-size: 14px">Rapat Pleno Dewan Guru tentang Kelulusan pada tanggal 04 Mei 2023.</li>
+                <li style="font-size: 12px">Ketuntasan dari seluruh program pembelajaran pada kurikulum 2013;</li>
+                <li style="font-size: 12px">Kriteria kelulusan dari satuan pendidikan sesuai dengan peraturan perundang-undangan ;</li>
+                <li style="font-size: 12px">Rapat Pleno Dewan Guru tentang Kelulusan pada tanggal 04 Mei 2023.</li>
             </ol>
-            <p style="font-size: 14px">Menerangkan bahwa :</p>
+            <p style="font-size: 12px">Menerangkan bahwa :</p>
             <table>
                 <tr>
-                    <td style="width:250px; font-size: 14px">Nama</td>
-                    <td style="width:50px; font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->nama_siswa }}</td>
+                    <td style="width:250px; font-size: 12px">Nama</td>
+                    <td style="width:30px; font-size: 12px">:</td>
+                    <td style="font-size: 12px">{{ $siswa->nama_siswa }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Tempat Tanggal Lahir</td>
-                    <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->tempat_lahir}}, {{  $siswa->tanggal_lahir  }}</td>
+                    <td style="font-size: 12px">Tempat Tanggal Lahir</td>
+                    <td style="font-size: 12px">:</td>
+                    <td style="font-size: 12px">{{ $siswa->tempat_lahir}}, {{  $siswa->tanggal_lahir  }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Nama Orang Tua</td>
-                    <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->nama_wali }}</td>
+                    <td style="font-size: 12px">Nama Orang Tua</td>
+                    <td style="font-size: 12px">:</td>
+                    <td style="font-size: 12px">{{ $siswa->nama_wali }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Nomor Induk Siswa</td>
-                    <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->nipd }}</td>
+                    <td style="font-size: 12px">Nomor Induk Siswa</td>
+                    <td style="font-size: 12px">:</td>
+                    <td style="font-size: 12px">{{ $siswa->nipd }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Nomor Induk Siswa Nasional</td>
-                    <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">00{{ $siswa->nisn }}</td>
+                    <td style="font-size: 12px">Nomor Induk Siswa Nasional</td>
+                    <td style="font-size: 12px">:</td>
+                    <td style="font-size: 12px">00{{ $siswa->nisn }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Peminatan / Kompetensi Keahlian</td>
-                    <td style="font-size: 14px">:</td>
-                    <td style="font-size: 14px">{{ $siswa->jurusan->jurusan }}</td>
+                    <td style="font-size: 12px">Peminatan / Kompetensi Keahlian</td>
+                    <td style="font-size: 12px">:</td>
+                    <td style="font-size: 12px">{{ $siswa->jurusan->jurusan }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px">Dinyatakan</td>
-                    <td style="font-size: 14px">:</td>
+                    <td style="font-size: 12px">Dinyatakan</td>
+                    <td style="font-size: 12px">:</td>
              
-                    <td style="font-size: 14px"><b>L U L U S</b></td>
+                    <td style="font-size: 12px;"><b>L U L U S</b></td>
                 </tr>
               
             </table>
-            <p style="font-size: 14px;">dengan nilai sebagai berikut :</p>
+            <p style="font-size: 12px;">dengan nilai sebagai berikut :</p>
             <table border="1" style="border-collapse: collapse;">
                 <tr>
-                  <th style="border: 1px solid black; width: 50px; font-size: 14px">No.</th>
-                  <th style="border: 1px solid black; width: 450px; font-size: 14px">Mata Pelajaran</th>
-                  <th style="border: 1px solid black; width: 70px;font-size: 14px">Nilai</th>
+                  <th style="border: 1px solid black; width: 50px; font-size: 12px">No.</th>
+                  <th style="border: 1px solid black; width: 450px; font-size: 12px">Mata Pelajaran</th>
+                  <th style="border: 1px solid black; width: 70px;font-size: 12px">Nilai</th>
                 </tr>
                 <tr>
-                    <td colspan="2" style="padding-left: 14px; font-size: 11px"><b>Muatan Nasional</b></td>
+                    <td colspan="2" style="padding-left: 12px; font-size: 12px"><b>Muatan Nasional</b></td>
                     <td></td>
                 </tr>
                 <!-- Muatan Nasional -->
                 <tr>
-                    <td style="text-align: center; font-size: 11px"> 1.</td>
-                    <td style="padding-left: 10px; font-size: 11px"> Pendidikan Agama dan Budi Pekerti</td>
-                    <td style="text-align: center;font-size: 11px">{{ $nilai->pai }}</td>
+                    <td style="text-align: center; font-size: 12px"> 1.</td>
+                    <td style="padding-left: 10px; font-size: 12px"> Pendidikan Agama dan Budi Pekerti</td>
+                    <td style="text-align: center;font-size: 12px">{{ $nilai->pai }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center;font-size: 11px"> 2.</td>
-                    <td style="padding-left: 10px;font-size: 11px"> Pendidikan Pancasila dan Kewarganegaraan</td>
-                    <td style="text-align: center;font-size: 11px">{{ $nilai->pkn }}</td>
+                    <td style="text-align: center;font-size: 12px"> 2.</td>
+                    <td style="padding-left: 10px;font-size: 12px"> Pendidikan Pancasila dan Kewarganegaraan</td>
+                    <td style="text-align: center;font-size: 12px">{{ $nilai->pkn }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 3.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Bahasa Indonesia</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->bindo }}</td>
+                    <td style="text-align: center; font-size:12px;"> 3.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Bahasa Indonesia</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->bindo }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 4.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Matematika</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->mtk }}</td>
+                    <td style="text-align: center; font-size:12px;"> 4.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Matematika</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->mtk }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 5.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Sejarah Indonesia</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->sindo }}</td>
+                    <td style="text-align: center; font-size:12px;"> 5.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Sejarah Indonesia</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->sindo }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 6.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Bahasa Inggris</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->bing }}</td>
+                    <td style="text-align: center; font-size:12px;"> 6.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Bahasa Inggris</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->bing }}</td>
                 </tr>
 
                 <!-- Muatan Kewilayahan -->
                 <tr>
-                    <td colspan="2" style="padding-left: 14px; font-size:11px;"><b>Muatan Kewilayahan</b></td>
+                    <td colspan="2" style="padding-left: 12px; font-size:12px;"><b>Muatan Kewilayahan</b></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 1.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Seni Budaya</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->senbud }}</td>
+                    <td style="text-align: center; font-size:12px;"> 1.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Seni Budaya</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->senbud }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 2.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Pendidikan Jasmani,Olahraga dan Kesehatan</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->pjok }}</td>
+                    <td style="text-align: center; font-size:12px;"> 2.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Pendidikan Jasmani,Olahraga dan Kesehatan</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->pjok }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 3.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Bahasa Sunda</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->basun }}</td>
+                    <td style="text-align: center; font-size:12px;"> 3.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Bahasa Sunda</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->basun }}</td>
                 </tr>
                
                 
                 <!-- Muatan Peminatan Kejuruan -->
                 <tr>
-                    <td colspan="2" style="padding-left: 14px; font-size:11px;"><b>Muatan Peminatan Kejuruan</b></td>
+                    <td colspan="2" style="padding-left: 12px; font-size:12px;"><b>Muatan Peminatan Kejuruan</b></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 1.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Simulasi dan Komunikasi Digital</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->simdig }}</td>
+                    <td style="text-align: center; font-size:12px;"> 1.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Simulasi dan Komunikasi Digital</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->simdig }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 2.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> {{ ($siswa->jurusan_id == 5) ? 'Tinjauan Seni' : 'Fisika' }}</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->f_ts }}</td>
+                    <td style="text-align: center; font-size:12px;"> 2.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> {{ ($siswa->jurusan_id == 5) ? 'Tinjauan Seni' : 'Fisika' }}</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->f_ts }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 3.</td>
-                    <td style="padding-left: 10px; font-size:11px;">{{ ($siswa->jurusan_id == 5) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->k_ddk }}</td>
+                    <td style="text-align: center; font-size:12px;"> 3.</td>
+                    <td style="padding-left: 10px; font-size:12px;">{{ ($siswa->jurusan_id == 5) ? 'Dasar-dasar Kreativitas':'Kimia' }} 	</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->k_ddk }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 4.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Dasar Program Keahlian</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->dpk }}</td>
+                    <td style="text-align: center; font-size:12px;"> 4.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Dasar Program Keahlian</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->dpk }}</td>
                 </tr>
                 <tr>
-                    <td style="text-align: center; font-size:11px;"> 5.</td>
-                    <td style="padding-left: 10px; font-size:11px;"> Kompetensi Keahlian</td>
-                    <td style="text-align: center; font-size:11px;">{{ $nilai->kk }}</td>
+                    <td style="text-align: center; font-size:12px;"> 5.</td>
+                    <td style="padding-left: 10px; font-size:12px;"> Kompetensi Keahlian</td>
+                    <td style="text-align: center; font-size:12px;">{{ $nilai->kk }}</td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: center; font-size:11px;"><b>Rata Rata</b></td>
-                    <td style="text-align: center; font-size:14px;">
+                    <td colspan="2" style="text-align: center; font-size:12px;"><b>Rata Rata</b></td>
+                    <td style="text-align: center; font-size:12px;">
                         <b>{{ $avg }}</b>
                     </td>
                 </tr>
             </table>
-            <div class="footer" style="margin-left: 350px;">
-                <p style="font-size: 14px">Depok, 05 Mei 2023</p>
-                <p style="font-size: 14px"><b>Kepala Sekolah SMK Taruna Bhakti,</b></p>
-                <div class="" style="width: 100%; height: 20px; font-size:14px;"></div>
-                <p style="font-size: 14px"><b><u>Nursidik, ST</u></b></p>
-                {{-- <p style="font-size: 14px">NIP 19790911200411201</p> --}}
+            <div class="footer" style="margin-left: 400px;">
+                <p style="font-size: 12px">Depok, 05 Mei 2023</p>
+                <p style="font-size: 12px; margin-top:-10px;"><b>Kepala SMK Taruna Bhakti</b></p>
+               
+                <img src="assets/img/ttd-stempel.png" style="width: 130px; margin-top:-5px;" alt="">
+                <p style="font-size: 12px; margin-top:-5px;"><b><u>Nursidik, ST</u></b></p>
+                {{-- <p style="font-size: 12px">NIP 19790911200411201</p> --}}
             </div>
         </div>  
 
