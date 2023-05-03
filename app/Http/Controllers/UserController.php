@@ -84,13 +84,13 @@ class UserController extends Controller
 
     public function logout()
     {
-        $role = auth()->user()->role;
+        // $role = auth()->user()->role;
 
         Auth::logout();
-        if($role != 'admin'){
-            return redirect()->route('home');
-        }
-        return redirect()->route('view.signin');
+        // if($role != 'admin'){
+        return redirect()->route('home');
+        // }
+        // return redirect()->route('view.signin');
     }
 
     public function generatePdf()

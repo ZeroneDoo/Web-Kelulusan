@@ -27,7 +27,8 @@ class KurikulumController extends Controller
             "nisn" => "required",
             "nipd" => "required"
         ], [
-            "nisn.required" => "*Username Tidak Boleh Kosong!!"
+            "nisn.required" => "*Username Tidak Boleh Kosong!!",
+            "nipd.required" => "*Password Tidak Boleh Kosong!!"
         ]);
 
         $findUser = User::where('nisn', $request->nisn)->first();
@@ -117,6 +118,9 @@ class KurikulumController extends Controller
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'kelas_id' => 'required',
+            'pkl' => 'required',
+            'kurikulum' => 'required',
+            'ukk' => 'required',
         ]);
 
         $findData = User::with(['kelas'])->find($id);

@@ -47,6 +47,27 @@ Ubah Data Siswa
                                 @endforeach
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="pkl" class="text-sm">Persyaratan PKL</label>
+                            <select class="form-control form-control" id="pkl" name="pkl">
+                                <option value="1" {{ $siswa->pkl == 1 ?'selected' : '' }}>Lengkap</option>   
+                                <option value="0" {{ $siswa->pkl == 0 ?'selected' : '' }}>Belum Lengkap</option>   
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="kurikulum" class="text-sm">Persyaratan Kurikulum</label>
+                            <select class="form-control form-control" id="kurikulum" name="kurikulum">
+                                <option value="1" {{ $siswa->kurikulum == 1 ?'selected' : '' }}>Lengkap</option>   
+                                <option value="0" {{ $siswa->kurikulum == 0 ?'selected' : '' }}>Belum Lengkap</option>   
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ukk" class="text-sm">Persyaratan Ujian Kenaikan Kelas(UKK)</label>
+                            <select class="form-control form-control" id="ukk" name="ukk">
+                                <option value="1" {{ $siswa->ukk == 1 ?'selected' : '' }}>Lengkap</option>   
+                                <option value="0" {{ $siswa->ukk == 0 ?'selected' : '' }}>Belum Lengkap</option>   
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
                     </form>
                 </div>

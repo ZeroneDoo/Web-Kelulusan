@@ -28,12 +28,18 @@
                                         <label>Username</label>
                                         <div class="mb-3">
                                             <input type="text" class="form-control" name="nisn" placeholder="Username"
-                                                aria-label="Email" aria-describedby="email-addon">
+                                                aria-label="Email" aria-destcribedby="email-addon">
+                                                @error('nisn')
+                                                    <small style="color:red; font-weight: bold">{{ $message }}</small>
+                                                @enderror
                                         </div>
                                         <label>Password</label>
                                         <div class="mb-3">
                                             <input type="password" class="form-control" name="nipd" placeholder="Password"
                                                 aria-label="Password" aria-describedby="password-addon">
+                                            @error('nipd')
+                                                <small style="color:red; font-weight: bold">{{ $message }}</small>
+                                            @enderror
                                         </div>
                                         <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="rememberMe" checked="">

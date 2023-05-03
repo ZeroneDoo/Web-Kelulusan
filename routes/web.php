@@ -53,33 +53,33 @@ Route::controller(KurikulumController::class)->group(function(){
     });
     Route::middleware(['auth', 'isLoginAdmin'])->group(function(){
         // get
-        Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");
-        Route::get('/siswa', 'viewSiswa')->name("view.siswa");
-        Route::get('/inputnilai', 'viewInputNilai')->name("view.inputNilai");
-        Route::get('/countdown', 'viewCountdown')->name('view.countdown');
+        Route::get('/admin/jurusan', 'viewJurusan')->name("view.jurusan");
+        Route::get('/admin/siswa', 'viewSiswa')->name("view.siswa");
+        Route::get('/admin/inputnilai', 'viewInputNilai')->name("view.inputNilai");
+        Route::get('/admin/countdown', 'viewCountdown')->name('view.countdown');
     
         // countdown - post
-        Route::post('/countdown', 'postCountdown')->name('post.countdown');
+        Route::post('/admin/countdown', 'postCountdown')->name('post.countdown');
 
         // import excel
-        Route::post('/importuser', 'importExcelUser')->name('importExcel'); // import data user
-        Route::post('/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
-        Route::post('/nilai', 'importExcelNilai')->name('importExcelNilai'); // import nilai
+        Route::post('/admin/importuser', 'importExcelUser')->name('importExcel'); // import data user
+        Route::post('/admin/importjurusan', 'importExcelJurusan')->name('importExcelJurusan'); // import data jurusan
+        Route::post('/admin/nilai', 'importExcelNilai')->name('importExcelNilai'); // import nilai
     
         // edit
-        Route::get('/jurusan/{id}', 'editJurusan')->name('edit.jurusan');
-        Route::get('/siswa/{id}', 'editSiswa')->name('edit.siswa');
-        Route::get('/inputnilai/{id}', 'editInputNilai')->name('edit.inputNilai');
+        Route::get('/admin/jurusan/{id}', 'editJurusan')->name('edit.jurusan');
+        Route::get('/admin/siswa/{id}', 'editSiswa')->name('edit.siswa');
+        Route::get('/admin/inputnilai/{id}', 'editInputNilai')->name('edit.inputNilai');
     
         // put
-        Route::post('/jurusan/{id}', 'putJurusan')->name('put.jurusan');
-        Route::post('/siswa/{id}', 'putSiswa')->name('put.siswa');
-        Route::post('/inputnilai/{id}', 'putInputNilai')->name('put.inputNilai');
+        Route::post('/admin/jurusan/{id}', 'putJurusan')->name('put.jurusan');
+        Route::post('/admin/siswa/{id}', 'putSiswa')->name('put.siswa');
+        Route::post('/admin/inputnilai/{id}', 'putInputNilai')->name('put.inputNilai');
     
         // delete
-        Route::get('/deljurusan/{id}', 'deleteJurusan')->name('delete.jurusan');
-        Route::get('/delsiswa/{id}', 'deleteSiswa')->name('delete.siswa');
-        Route::get('/delinputnilai/{id}', 'deleteInputNilai')->name('delete.inputNilai');
+        Route::get('/admin/deljurusan/{id}', 'deleteJurusan')->name('delete.jurusan');
+        Route::get('/admin/delsiswa/{id}', 'deleteSiswa')->name('delete.siswa');
+        Route::get('/admin/delinputnilai/{id}', 'deleteInputNilai')->name('delete.inputNilai');
 
 
     });
