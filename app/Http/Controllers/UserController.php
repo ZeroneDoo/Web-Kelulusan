@@ -104,6 +104,6 @@ class UserController extends Controller
         // $pdf->save('Surat Kelulusan.pdf');
         $pdf->setPaper('A4', 'potrait');
         $pdf->render();
-        return $pdf->stream('Surat Kelulusan.pdf');
+        return $pdf->stream("Surat Kelulusan - $data->nama_siswa.pdf");
     }
 }
