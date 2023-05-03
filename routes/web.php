@@ -37,6 +37,9 @@ Route::controller(KurikulumController::class)->group(function(){
         Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");
         Route::get('/siswa', 'viewSiswa')->name("view.siswa");
         Route::get('/inputnilai', 'viewInputNilai')->name("view.inputNilai");
+        Route::get('/countdown', function(){
+            return view("dashboard/countdown");
+        });
     
         // import excel
         Route::post('/importuser', 'importExcelUser')->name('importExcel'); // import data user
@@ -57,6 +60,8 @@ Route::controller(KurikulumController::class)->group(function(){
         Route::get('/deljurusan/{id}', 'deleteJurusan')->name('delete.jurusan');
         Route::get('/delsiswa/{id}', 'deleteSiswa')->name('delete.siswa');
         Route::get('/delinputnilai/{id}', 'deleteInputNilai')->name('delete.inputNilai');
+
+
     });
 });
 
