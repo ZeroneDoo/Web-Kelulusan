@@ -17,11 +17,11 @@ Ubah Data Siswa
                         @csrf
                         <div class="form-group">
                             <label for="nisn" class="text-sm">NISN</label>
-                            <input type="text" class="form-control" id="nisn" name="nisn" value="{{ $siswa->nisn }}" disabled>
+                            <input type="text" class="form-control" id="nisn" name="nisn" value="{{ $siswa->nisn }}">
                         </div>
                         <div class="form-group">
                             <label for="nipd" class="text-sm">NIPD</label>
-                            <input type="text" class="form-control" id="nipd" name="nipd" value="{{ $siswa->nipd }}" disabled>
+                            <input type="text" class="form-control" id="nipd" name="nipd" value="{{ $siswa->nipd }}">
                         </div>
                         <div class="form-group">
                             <label for="nama" class="text-sm">Nama</label>
