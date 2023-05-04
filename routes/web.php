@@ -53,10 +53,10 @@ Route::controller(KurikulumController::class)->group(function(){
     });
     Route::middleware(['auth', 'isLoginAdmin'])->group(function(){
         // get
-        Route::get('/admin/jurusan', 'viewJurusan')->name("view.jurusan");
-        Route::get('/admin/siswa', 'viewSiswa')->name("view.siswa");
-        Route::get('/admin/inputnilai', 'viewInputNilai')->name("view.inputNilai");
-        Route::get('/admin/countdown', 'viewCountdown')->name('view.countdown');
+        Route::get('/jurusan', 'viewJurusan')->name("view.jurusan");
+        Route::get('/siswa', 'viewSiswa')->name("view.siswa");
+        Route::get('/inputnilai', 'viewInputNilai')->name("view.inputNilai");
+        Route::get('/countdown', 'viewCountdown')->name('view.countdown');
     
         // countdown - post
         Route::post('/admin/countdown', 'postCountdown')->name('post.countdown');
